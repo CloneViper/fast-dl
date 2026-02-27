@@ -37,7 +37,7 @@
 	
 	"FullIcon"
 	{
-		"xpos"			"46"
+		"xpos"			"86"
 		"ypos"			"17"
 		"wide"			"26"
 		"image"			"resource/svgs/meters/ico_brick_active.svg"
