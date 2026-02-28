@@ -266,7 +266,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Scattergun"
 			"item_name"	"#TF_Unique_Achievement_Scattergun_Double"
-			"item_description"	"#TF_Unique_Achievement_Scattergun_Double_desc"
+			"item_description"	"I make these jumps look easy."
 			"item_logname"	"force_a_nature"
 			"item_iconname"	"force_a_nature"
 			"item_slot"	"primary"
@@ -376,7 +376,7 @@
 			"item_slot"	"primary"
 			"item_type_name"	"#TF_Weapon_Scattergun"
 			"item_name"	"#TF_Weapon_PEP_Scattergun"
-			"item_description"	"#TF_Weapon_PEP_Scattergun_Desc"
+			"item_description"	"I'm a freaking blur here!"
 			"item_logname"	"pep_brawlerblaster"
 			"item_iconname"	"pep_brawlerblaster"
 			"item_quality"	"unique"
@@ -397,17 +397,25 @@
 				"min_viewmodel_offset"					"10 0 -12"
 			}
 			"attributes"
-			{
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.90"
-				}
+			{	
 				"boost on damage"
 				{
 					"attribute_class"	"boost_on_damage"
 					"value"	"1"
 				}
+
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.66"
+				}
+
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.90"
+				}
+				
 				"hype resets on jump"
 				{
 					"attribute_class"	"hype_resets_on_jump"
@@ -418,11 +426,7 @@
 					"attribute_class"	"lose_hype_on_take_damage"
 					"value"	"4"
 				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"				"0.66"
-				}
+				
 			}
 			"visuals"
 			{
@@ -455,7 +459,7 @@
 			"base_item_name"	"Mad Milk"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Jar_Milk"
-			"item_description"	"#TF_MadMilk_Desc"
+			"item_description"	"Nice milkshake there!"
 			"item_name"	"#TF_MadMilk"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
@@ -606,7 +610,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bat"
 			"item_name"	"#TF_BallBuster"
-			"item_description"	"#TF_BallBuster_Desc"
+			"item_description"	"Keep ya blood to yourself, idiot!"
 			"item_logname"	"wrap_assassin"
 			"item_iconname"	"wrap_assassin"
 			"item_slot"	"melee"
@@ -699,6 +703,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"#TF_TheBlackBox"
+			"item_description"	"Killing maggots like you makes me stronger!"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -801,6 +806,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"#TF_LibertyLauncher"
+			"item_description"	"Freedom will fly through the air!"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"item_logname"	"liberty_launcher"
@@ -831,11 +837,7 @@
 					"attribute_class"	"mult_projectile_speed"
 					"value"	"1.4"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.75"
-				}
+				
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -844,6 +846,12 @@
 				"rocket jump damage reduction"
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value" "0.75"
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
 					"value" "0.75"
 				}
 			}
@@ -869,7 +877,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Battle_Banner"
 			"item_name"	"#TF_TheBattalionsBackup"
-			"item_description"	"#TF_TheBattalionsBackup_Desc"
+			"item_description"	"Boost the morale of your unit."
 			"item_slot"	"secondary"
 			"equip_region"	"back"
 			"anim_slot"	"melee"
@@ -943,7 +951,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Parachute"
 			"item_name"	"#TF_Weapon_BaseJumper"
-			"item_description"	"#TF_Weapon_BaseJumper_Desc"
+			"item_description"	"Surprise from the skies."
 			"item_slot"		"secondary"
 			"equip_region"	"back"
 			"anim_slot"		"melee"
@@ -1004,6 +1012,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pickaxe"
 			"item_name"	"#TF_Unique_Achievement_Pickaxe"
+			"item_description"	"You're going down with me, maggot!"
 			"item_logname"	"unique_pickaxe"
 			"item_slot"	"melee"
 			"item_quality"	"unique"
@@ -1077,6 +1086,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Riding_Crop"
 			"item_name"	"#TF_DisciplinaryAction"
+			"item_description"	"This is not a drill, get going!"
 			"item_logname"	"disciplinary_action"
 			"item_iconname"	"disciplinary_action"
 			"item_slot"	"melee"
@@ -1100,11 +1110,7 @@
 			}
 			"attributes"
 			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.75"
-				}
+				
 				"speed buff ally"
 				{
 					"attribute_class"	"speed_buff_ally"
@@ -1120,6 +1126,13 @@
 					"attribute_class"	"melee_bounds_multiplier"
 					"value"	"1.55"
 				}
+				
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+
 				"kill eater score type 2"
 				{
 					"attribute_class"	"kill_eater_score_type_2"
@@ -1155,6 +1168,7 @@
 			"base_item"			"0"
 			"item_type_name"	"#TF_Weapon_Riding_Crop"
 			"item_name"	"#TF_DisciplinaryAction"
+			"item_description"	"I'm paying by the hour, stop wasting time!"
 			"item_logname"	"disciplinary_action"
 			"item_iconname"	"disciplinary_action"
 			"item_class"	"tf2c_weapon_umbrella"
@@ -1179,11 +1193,7 @@
 			}
 			"attributes"
 			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.8"
-				}
+
 				"speed buff ally"
 				{
 					"attribute_class"	"speed_buff_ally"
@@ -1194,6 +1204,12 @@
 					"attribute_class"	"melee_range_multiplier"
 					"value"	"1.5"
 				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.8"
+				}
+				
 			}
 			"visuals"
 			{
@@ -1223,6 +1239,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Shovel"
 			"item_name"	"#TF_MarketGardener"
+			"item_description"	"Shovel on the head makes 'em dead."
 			"item_logname"	"market_gardener"
 			"item_iconname"	"market_gardener"
 			"item_slot"	"melee"
@@ -1246,15 +1263,17 @@
 			}
 			"attributes"
 			{
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.2"
-				}
+				
 				"mod crit while airborne"
 				{
 					"attribute_class"	"crit_while_airborne"
 					"value"	"1"
+				}
+
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
 				}
 				"crit mod disabled"
 				{
@@ -1293,6 +1312,7 @@
 			"item_iconname"	"backburner"
 			"show_in_armory"	"1"
 			"item_name"	"#TF_Unique_Achievement_Flamethrower"
+			"item_description"	"They won't see this coming."
 			"image_inventory"	"backpack/weapons/c_models/c_backburner/c_backburner"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -1339,7 +1359,7 @@
 			"particle_suffix"	"dragons_fury"
 			"propername"	"1"
 			"item_name"	"#TF_Weapon_DragonsFury"
-			"item_description"	"#TF_Weapon_DragonsFury_Desc"
+			"item_description"	"Serious damage, but serious risks."
 			"item_slot"	"primary"
 			"anim_slot"		"primary"
 			"item_quality"	"unique"
@@ -1417,6 +1437,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SledgeHammer"
 			"item_name"	"#TF_ThePowerjack"
+			"item_description"	"Made from spare parts."
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_powerjack/c_powerjack"
 			"image_inventory_size_w"		"128"
@@ -1438,6 +1459,12 @@
 			}
 			"attributes"
 			{
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+
 				"heal on kill"
 				{
 					"attribute_class"	"heal_on_kill"
@@ -1453,11 +1480,7 @@
 					"attribute_class"	"mult_dmgtaken"
 					"value"	"1.2"
 				}
-				"provide on active"
-				{
-					"attribute_class"	"provide_on_active"
-					"value" "1"
-				}
+				
 			}
 			"visuals"
 			{
@@ -1487,6 +1510,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_GardenRake"
 			"item_name"	"#TF_BackScratcher"
+			"item_description"	"Ouch, my back!"
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_back_scratcher/c_back_scratcher"
 			"image_inventory_size_w"		"128"
@@ -1514,15 +1538,16 @@
 					"attribute_class"	"mult_dmg"
 					"value"	"1.25"
 				}
-				"health from healers reduced"
-				{
-					"attribute_class"	"mult_health_fromhealers"
-					"value"			"0.25"
-				}
+				
 				"health from packs increased"
 				{
 					"attribute_class"	"mult_health_frompacks"
 					"value"			"1.5"
+				}
+				"health from healers reduced"
+				{
+					"attribute_class"	"mult_health_fromhealers"
+					"value"			"0.25"
 				}
 			}
 		}
@@ -1553,6 +1578,7 @@
 			"item_iconname"	"loch_n_load"
 			"item_type_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_name"		"#TF_LochNLoad"
+			"item_description"	"His drunkness warps reality to allow 3 grenades in the same barrel, Engineer is studying this phenomenon."
 			"item_slot"		"primary"
 			"anim_slot"		"secondary"
 			"item_quality"		"unique"
@@ -1577,11 +1603,7 @@
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.75"
-				}
+				
 				"dmg bonus vs buildings"
 				{
 					"attribute_class"	"mult_dmg_vs_buildings"
@@ -1597,6 +1619,13 @@
 					"attribute_class"	"mult_explosion_radius"
 					"value"	"0.75"
 				}
+				
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.75"
+				}
+
 				"sticky air burst mode"
 				{
 					"attribute_class"	"set_detonate_mode"
@@ -1650,7 +1679,7 @@
 			"item_iconname"	"loose_cannon_explosion"
 			"item_type_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_name"		"#TF_Weapon_Cannon"
-			"item_description"		"#TF_Weapon_Cannon_desc"
+			"item_description"		"Ahoy, lassies!"
 			"item_slot"		"primary"
 			"anim_slot"		"secondary"
 			"item_quality"		"unique"
@@ -1737,6 +1766,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_PipebombLauncher"
 			"item_name"	"#TF_Unique_Achievement_StickyLauncher"
+			"item_description"	"Didn't ya see the bloody bombs?"
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
 			"item_quality"	"unique"
@@ -1823,7 +1853,7 @@
 			"show_in_armory"	"1"
 			"item_type_name" 	"#TF_Wearable_Shield"
 			"item_name"		"#TF_Unique_Achievement_Shield"
-			"item_description"	"#TF_Unique_Achievement_Shield_Desc"
+			"item_description"	"A yelling scottish cyclop puts enemies to fear."
 			"item_slot"		"secondary"
 			"equip_region"	"arms"
 			"anim_slot"		"FORCE_NOT_USED"
@@ -1891,7 +1921,7 @@
 			}
 			"base_item_name"	"The Eyelander"
 			"item_name"	"#TF_Unique_Achievement_Sword"
-			"item_description"	"#TF_Unique_Achievement_Sword_Desc"
+			"item_description"	"An elegant weapon for a drunken scottish."
 			"propername"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
 			"model_player"	"models/weapons/c_models/c_claymore/c_claymore.mdl"
@@ -1940,11 +1970,7 @@
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "-25"
-				}
+				
 				"decapitate type"
 				{
 					"attribute_class"	"decapitate_type"
@@ -1959,6 +1985,12 @@
 				{
 					"attribute_class"	"kill_eater_kill_type"
 					"value"	"6"			
+				}
+
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "-25"
 				}
 				"special taunt"
 				{
@@ -1989,7 +2021,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_StickBomb"
 			"item_name"	"#TF_UllapoolCaber"
-			"item_description"	"#TF_UllapoolCaber_Desc"
+			"item_description"	"Kablooey!"
 			"item_logname"	"ullapool_caber"
 			"item_iconname"	"ullapool_caber"
 			"item_slot"	"melee"
@@ -2054,6 +2086,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Minigun"
 			"item_name"	"#TF_GatlingGun"
+			"item_description"	"Oksana. Slow but strong."
 			"item_slot"	"primary"
 			"item_logname"	"brass_beast"
 			"item_iconname"	"brass_beast"
@@ -2093,6 +2126,13 @@
 					"attribute_class"	"mult_dmg"
 					"value"	"1.20"
 				}
+				
+				"spunup_damage_resistance"
+				{
+					"attribute_class"		"spunup_damage_resistance"
+					"value"					"0.80"
+				}
+
 				"minigun spinup time increased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
@@ -2103,11 +2143,7 @@
 					"attribute_class"	"mult_player_aiming_movespeed"
 					"value" "0.4"
 				}
-				"spunup_damage_resistance"
-				{
-					"attribute_class"		"spunup_damage_resistance"
-					"value"					"0.80"
-				}
+				
 			}
 		}
 
@@ -2131,6 +2167,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Minigun"
 			"item_name"	"#TF_Tomislav"
+			"item_description"	"Svetlana. Accurate, shoots slow."
 			"item_slot"	"primary"
 			"item_logname"	"tomislav"
 			"item_iconname"	"tomislav"
@@ -2225,6 +2262,7 @@
 			"item_logname" "family_business"
 			"item_iconname" "family_business"
 			"item_name"	"#TF_RussianRiot"
+			"item_description"	"Does he think he's Scout?"
 			"item_slot"	"secondary"
 			"show_in_armory"	"1"
 			"item_quality"	"unique"
@@ -2248,11 +2286,7 @@
 			}
 			"attributes"
 			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.85"
-				}
+				
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -2261,6 +2295,12 @@
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
+					"value" "0.85"
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
 					"value" "0.85"
 				}
 			}
@@ -2287,7 +2327,7 @@
 				"can_extinguish"		"1"
 			}
 			"item_name"	"#TF_Unique_Lunchbox_Chocolate"
-			"item_description" "#TF_Lunchbox_Chocolate_desc"
+			"item_description" "High on sugar."
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_chocolate/c_chocolate"
 			"model_player"	"models/workshop/weapons/c_models/c_chocolate/c_chocolate.mdl"
 			"propername"	"1"
@@ -2341,7 +2381,7 @@
 				"can_heal_allies"		"1"
 			}
 			"item_name"	"#TF_BuffaloSteak"
-			"item_description"	"#TF_BuffaloSteak_Desc"
+			"item_description"	"It's not rare, it's raw."
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak"
 			"model_player"	"models/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak.mdl"
 			"propername"	"1"
@@ -2406,6 +2446,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Gloves"
 			"item_name"	"#TF_Unique_Gloves_of_Running_Urgently"
+			"item_description"	"His shortlived boxing career will be remembered."
 			"item_slot"	"melee"
 			"item_logname"	"gloves_running_urgently"
 			"item_iconname"	"gloves_running_urgently"
@@ -2482,6 +2523,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Gloves"
 			"item_name"	"#TF_FistsOfSteel"
+			"item_description"	"Hard enough to block a few bullets."
 			"item_slot"	"melee"
 			"item_logname"	"steel_fists"
 			"item_iconname"	"steel_fists"
@@ -2568,6 +2610,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"#TF_Unique_Sentry_Shotgun"
+			"item_description"	"His sentry is not your only threat."
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"min_ilevel"	"5"
@@ -2648,6 +2691,7 @@
 			"item_iconname"	"rescue_ranger"
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"#TF_Weapon_Shotgun_Building_Rescue"
+			"item_description"	"Sentry staying up!"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -2733,6 +2777,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Robot_Arm"
 			"item_name"	"#TF_Unique_Robot_Arm"
+			"item_description"	"Sometimes you need a little less gun."
 			"item_slot"	"melee"
 			"equip_region"	"arms"
 			"item_quality"	"unique"
@@ -2763,11 +2808,7 @@
 					"attribute_class"	"gunslinger_punch_combo"
 					"value"				"1"
 				}
-				"mod wrench builds minisentry"
-				{
-					"attribute_class"	"wrench_builds_minisentry"
-					"value"	"1"
-				}
+				
 				"max health additive bonus"
 				{
 					"attribute_class"	"add_maxhealth"
@@ -2778,6 +2819,13 @@
 					"attribute_class"	"sentry_build_rate_multiplier"
 					"value"		"2.5"
 				}
+	
+				"mod wrench builds minisentry"
+				{
+					"attribute_class"	"wrench_builds_minisentry"
+					"value"	"1"
+				}
+
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
@@ -2835,6 +2883,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Jag"
+			"item_description"	"Easier to get'em up, harder to maintain."
 			"item_slot"	"melee"
 			"item_quality"	"unique"
 			"min_ilevel"	"15"
@@ -2918,6 +2967,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SyringeGun"
 			"item_name"	"#TF_Unique_Achievement_Syringegun1"
+			"item_description"	"Self-care is wünderbar."
 			"item_slot"	"primary"
 			"image_inventory"	"backpack/weapons/c_models/c_leechgun/c_leechgun"
 			"image_inventory_size_w"		"128"
@@ -2994,7 +3044,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SyringeGun_Prototype"
 			"item_name"		"#TF_Overdose"
-			"item_description"	"#TF_Overdose_Desc"
+			"item_description"	"My heart is racing!"
 			"item_slot"	"primary"
 			"image_inventory"	"backpack/weapons/c_models/c_proto_syringegun/c_proto_syringegun"
 			"image_inventory_size_w"		"128"
@@ -3074,6 +3124,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bonesaw"
 			"item_name"		"#TF_Amputator"
+			"item_description"	"Group therapy? Nein!"
 			"item_slot"		"melee"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_amputator/c_amputator"
 			"image_inventory_size_w"		"128"
@@ -3100,11 +3151,7 @@
 					"attribute_class"	"provide_on_active"
 					"value" "1"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.80"
-				}
+				
 				"enables aoe heal"
 				{
 					"attribute_class"	"enables_aoe_heal"
@@ -3115,6 +3162,13 @@
 					"attribute_class"	"add_health_regen"
 					"value"	"3"
 				}
+				
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.80"
+				}
+
 				"special taunt"
 				{
 					"attribute_class"	"special_taunt"
@@ -3143,6 +3197,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Jar"
 			"item_name"	"#TF_Unique_Achievement_Jar"
+			"item_description"	"Restrooms are a luxury, mate."
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"anim_slot"	"item1"
@@ -3216,6 +3271,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_Unique_Achievement_Revolver"
+			"item_description"	"Handcrafted for a man with fine taste."
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -3287,6 +3343,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_LEtranger"
+			"item_description"	"For when more stealth is an option."
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"propername"	"0"
@@ -3317,16 +3374,19 @@
 					"attribute_class"	"add_cloak_on_hit"
 					"value" "15"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.8"
-				}
+
 				"cloak consume rate decreased"
 				{
 					"attribute_class"	"mult_cloak_meter_consume_rate"
 					"value" "0.6"
 				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.8"
+				}
+				
 			}
 			"visuals"
 			{
@@ -3350,6 +3410,7 @@
 				"can_deal_taunt_damage"			"1"
 			}
 			"item_name"	"#TF_BigEarner"
+			"item_description"	"Scout convinced him to try running."
 			"propername"	"1"
 			"item_logname"	"big_earner"
 			"item_iconname"	"big_earner"
@@ -3367,11 +3428,7 @@
 					"attribute_class"	"add_cloak_on_kill"
 					"value" "30"
 				}
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "-25"
-				}
+				
 				"special taunt"
 				{
 					"attribute_class"	"special_taunt"
@@ -3381,6 +3438,12 @@
 				{
 					"attribute_class"	"speed_boost_on_kill"
 					"value"	"3"
+				}
+
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "-25"
 				}
 			}
 		}	
@@ -3399,7 +3462,7 @@
 				"can_deal_taunt_damage"		"1"
 			}
 			"item_name"	"#TF_Kunai"
-			"item_description"	"#TF_Kunai_Desc"
+			"item_description"	"Your life is mine."
 			"propername"	"0"
 			"item_logname"	"kunai"
 			"item_iconname"	"kunai"
@@ -3445,6 +3508,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Spy_Sapper"
 			"item_name"	"#TF_SD_Sapper"
+			"item_description"	"When psychological damage matters more than physical one."
 			"item_slot"	"building"
 			"item_quality"	"unique"
 			"item_logname"	"recorder"
