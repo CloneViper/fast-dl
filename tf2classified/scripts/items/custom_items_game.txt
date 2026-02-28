@@ -1578,7 +1578,7 @@
 			"item_iconname"	"loch_n_load"
 			"item_type_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_name"		"#TF_LochNLoad"
-			"item_description"	"His drunkness warps reality to allow 3 grenades in the same barrel, Engineer is studying this phenomenon."
+			"item_description"	"His drunkness warps reality to fit 3 grenades in the same barrel, Engineer is studying this phenomenon."
 			"item_slot"		"primary"
 			"anim_slot"		"secondary"
 			"item_quality"		"unique"
