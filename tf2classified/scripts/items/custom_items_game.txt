@@ -38,10 +38,7 @@
 			{
 				"pyro"	"1"
 			}
-			"static_attrs"
-			{
-				"extinguish restores health"			"20"
-			}
+			
 			"visuals"
 			{
 				"animation_replacement"
@@ -194,6 +191,29 @@
 			
 		}
 	}
+
+	"attributes"
+	{
+		"15156"
+        	{
+            		"name"                    "lunchbox consumed on use"
+            		"attribute_class"        "lunchbox_force_cooldown"
+            		"description_string"    "Item is consumed after use and recharges"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "negative"
+        	}
+		
+		
+		"15158"
+        	{
+            		"name"                    "lunchbox healing increased"
+            		"attribute_class"        "lunchbox_healing_scale"
+            		"description_string"    "#Attrib_LunchboxHealingDecreased"
+            		"description_format"    "value_is_percentage"
+            		"effect_type"            "positive"
+        	}
+	}
+
 	"items"
 	{
 
@@ -459,7 +479,7 @@
 			"base_item_name"	"Mad Milk"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Jar_Milk"
-			"item_description"	"Nice milkshake there!"
+			"item_description"	"#TF_MadMilk_Desc"
 			"item_name"	"#TF_MadMilk"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
@@ -640,15 +660,17 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.35"
-				}
+				
 				"effect bar recharge rate increased"
 				{
 					"attribute_class"	"effectbar_recharge_rate"
 					"value" "0.75"
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.35"
 				}
 			}
 			"visuals"
@@ -877,7 +899,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Battle_Banner"
 			"item_name"	"#TF_TheBattalionsBackup"
-			"item_description"	"Boost the morale of your unit by making them more resistant to damage."
+			"item_description"	"#TF_TheBattalionsBackup_Desc"
 			"item_slot"	"secondary"
 			"equip_region"	"back"
 			"anim_slot"	"melee"
@@ -1254,8 +1276,8 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 -3 -10"
-				"airblast cost increased"				"2.5"
 				"mod flamethrower back crit"			"1"
+				"airblast cost increased"				"2.5"
 				"crit mod disabled hidden"				"0"
 			}
 			"visuals"
@@ -1308,7 +1330,6 @@
 			}
 			"static_attrs"
 			{
-				"extinguish restores health"			"20"
 				"min_viewmodel_offset"					"10 -3 -10"
 				"item_meter_charge_type"							"1"
 				"item_meter_charge_rate"				"0.8"
@@ -1508,7 +1529,7 @@
 			"item_iconname"	"loch_n_load"
 			"item_type_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_name"		"#TF_LochNLoad"
-			"item_description"	"His drunkness warps reality to fit 3 grenades in the same barrel, Engineer is studying this phenomenon."
+			"item_description"	"His drunkness warps reality to fit 3 grenades in the same barrel."
 			"item_slot"		"primary"
 			"anim_slot"		"secondary"
 			"item_quality"		"unique"
@@ -1561,6 +1582,8 @@
 					"attribute_class"	"set_detonate_mode"
 					"value"	"2"
 				}
+
+
 				"grenade no spin"
 				{
 					"attribute_class"	"grenade_no_spin"
@@ -1651,17 +1674,19 @@
 					"value"	"1.2"
 				}
 
+				"cannonball push back"
+				{
+					"attribute_class"	"cannonball_push_back"
+					"value"	"1"
+				}
+
 				"grenade not explode on impact"
 				{
 					"attribute_class"	"grenade_not_explode_on_impact"
 					"value"				"1"
 				}
 
-				"cannonball push back"
-				{
-					"attribute_class"	"cannonball_push_back"
-					"value"	"1"
-				}
+
 				"kill eater score type 2"
 				{
 					"attribute_class"	"kill_eater_score_type_2"
@@ -1699,7 +1724,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_PipebombLauncher"
 			"item_name"	"#TF_Unique_Achievement_StickyLauncher"
-			"item_description"	"Didn't ya see the bloody bombs?"
+			"item_description"	"Didn't ye see the bloody bombs?"
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
 			"item_quality"	"unique"
@@ -1786,7 +1811,7 @@
 			"show_in_armory"	"1"
 			"item_type_name" 	"#TF_Wearable_Shield"
 			"item_name"		"#TF_Unique_Achievement_Shield"
-			"item_description"	"A yelling scottish cyclop puts enemies to fear."
+			"item_description"	"#TF_Unique_Achievement_Shield_Desc"
 			"item_slot"		"secondary"
 			"equip_region"	"arms"
 			"anim_slot"		"FORCE_NOT_USED"
@@ -1854,7 +1879,7 @@
 			}
 			"base_item_name"	"The Eyelander"
 			"item_name"	"#TF_Unique_Achievement_Sword"
-			"item_description"	"An elegant weapon for a drunken scottish. Collecting heads makes you healthier and faster."
+			"item_description"	"#TF_Unique_Achievement_Sword_Desc"
 			"propername"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
 			"model_player"	"models/weapons/c_models/c_claymore/c_claymore.mdl"
@@ -2262,7 +2287,7 @@
 				"can_extinguish"		"1"
 			}
 			"item_name"	"#TF_Unique_Lunchbox_Chocolate"
-			"item_description" "High on sugar."
+			"item_description" "#TF_Lunchbox_Chocolate_desc"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_chocolate/c_chocolate"
 			"model_player"	"models/workshop/weapons/c_models/c_chocolate/c_chocolate.mdl"
 			"propername"	"1"
@@ -2316,7 +2341,7 @@
 				"can_heal_allies"		"1"
 			}
 			"item_name"	"#TF_BuffaloSteak"
-			"item_description"	"It's not rare, it's raw."
+			"item_description"	"#TF_BuffaloSteak_Desc"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak"
 			"model_player"	"models/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak.mdl"
 			"propername"	"1"
@@ -2371,19 +2396,27 @@
 			"name"				"The Sandvich"
 			"prefab"			"weapon_lunchbox"
 			"item_name"			"#TF_Weapon_Sandvich"
-			"item_description"	"Heals for 300 HP. Come closer! I will give you taste."
+			"item_description"	"Heals 300 HP when eaten. Come closer! I will give you taste."
 			"item_quality"		"normal"
 			"propername"		"1"
-
-			"item_class"	"tf_weapon_lunchbox"
-			"item_slot"		"secondary"
 			"used_by_classes"
 			{
 				"Heavy"		"1"
 			}
 			"attributes"
-			{
+			{	
 
+				"lunchbox healing increased"
+				{
+					"attribute_class"	"lunchbox_healing_scale"
+					"value" 		"2.5"
+				}
+				"lunchbox consumed on use"
+				{
+					"attribute_class"	"lunchbox_force_cooldown"
+					"value"				"1"
+				}
+				
 				"special taunt"
 				{
 					"attribute_class"	"special_taunt"
@@ -2536,8 +2569,7 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 0 -10"
-				"mult_patient_overheal_penalty_active"	"0.6"
-				"mult_health_fromhealers_penalty_active""0.6"
+				
 			}	
 			"hide_bodygroups_deployed_only"	"1"
 			"visuals"
@@ -2567,11 +2599,25 @@
 					"attribute_class"	"dmg_from_ranged"
 					"value"	"0.6"
 				}
+
 				"dmg from melee increased"
 				{
 					"attribute_class"	"dmg_from_melee"
 					"value"	"2.0"
 				}
+
+				"mult_patient_overheal_penalty_active"
+				{
+					"attribute_class"	"mult_patient_overheal_penalty_active"
+					"value" "0.6"
+				}
+
+				"mult_health_fromhealers_penalty_active"
+				{
+					"attribute_class"	"mult_health_fromhealers_penalty_active"
+					"value" "0.6"
+				}
+
 				"single wep holster time increased"
 				{
 					"attribute_class"	"mult_switch_from_wep_deploy_time"
@@ -2875,7 +2921,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Jag"
-			"item_description"	"Easier to get'em up, harder to maintain."
+			"item_description"	"Easier to get 'em up, harder to maintain."
 			"item_slot"	"melee"
 			"item_quality"	"unique"
 			"min_ilevel"	"15"
@@ -3036,7 +3082,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SyringeGun_Prototype"
 			"item_name"		"#TF_Overdose"
-			"item_description"	"My heart is racing! Übercharge determines speed bonus."
+			"item_description"	"#TF_Overdose_Desc"
 			"item_slot"	"primary"
 			"image_inventory"	"backpack/weapons/c_models/c_proto_syringegun/c_proto_syringegun"
 			"image_inventory_size_w"		"128"
@@ -3284,7 +3330,7 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -6"
-				"crit_dmg_falloff"			"1"
+				
 			}
 			"attributes"
 			{
@@ -3292,6 +3338,12 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
+				}
+
+				"crit_dmg_falloff"
+				{
+					"attribute_class"	"crit_dmg_falloff"
+					"value" "1"
 				}
 				"damage penalty"
 				{
@@ -3309,6 +3361,7 @@
 					"value"	"0"
 				}
 			}
+			
 			"visuals"
 			{
 				"sound_single_shot" "Weapon_Ambassador.Single"
