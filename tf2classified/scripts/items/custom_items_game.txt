@@ -2369,9 +2369,9 @@
 		"42" // Sandvich
 		{
 			"name"				"The Sandvich"
+			"prefab"			"weapon_lunchbox"
 			"item_name"			"#TF_Weapon_Sandvich"
-			"item_type_name"	"#TF_Weapon_LunchBox"
-			"item_description"	"#TF_Weapon_Sandvich_Desc"
+			"item_description"	"Heals for 300 HP. Come closer! I will give you taste."
 			"item_quality"		"normal"
 			"propername"		"1"
 
