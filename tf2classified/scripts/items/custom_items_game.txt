@@ -4,6 +4,34 @@
 {	
 	"prefabs"
 	{
+		"weapon_shotgun" // Shotgun
+		{
+			"item_name"			"#TF_Weapon_Shotgun"
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_shotgun"
+
+			"model_player"		"models/weapons/v_models/v_shotgun_engineer.mdl"
+			"model_world"		"models/weapons/w_models/w_shotgun.mdl"
+			"attach_to_hands"	"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+			}
+			"model_player_per_class"
+			{
+				"soldier"	"models/weapons/v_models/v_shotgun_soldier.mdl"
+				"heavy"		"models/weapons/v_models/v_shotgun_heavy.mdl"
+				"engineer"	"models/weapons/v_models/v_shotgun_engineer.mdl"
+				"pyro"		"models/weapons/v_models/v_shotgun_pyro.mdl"
+				"medic"	"models/weapons/v_models/v_shotgun_pyro.mdl"
+			}
+
+			"image_inventory"		"backpack/weapons/w_models/w_shotgun"
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_medium_gun_drop.wav"
+		}
 		"weapon_sword"
 		{
 			"enabled"	"1"
@@ -660,11 +688,13 @@
 					"attribute_class"	"bleeding_duration"
 					"value" "5"
 				}
+
 				"hit self on miss"
 				{
 					"attribute_class"	"hit_self_on_miss"
 					"value"	"1"
 				}
+			
 
 			}
 			"visuals"
@@ -2958,6 +2988,62 @@
 			}
 		}
 
+//      Medic - Primary
+//		Battle Medic
+//      ____________________________________________
+
+		"9999"
+		{
+			"name"	"The Kampfmediziner"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_name"	"Kampfmediziner"
+			"item_description"	"Ze healing is not as rewarding as ze hurting"
+			"prefab"	"weapon_shotgun"
+			"item_slot"	"primary"
+			"show_in_armory"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "45"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"				"10 0 -10"
+				"weapon_stattrak_module_scale"			"0.608"
+			}
+			"attributes"
+			{
+				
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "-25"
+				}
+				
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_FamilyBusiness.Single"
+				"sound_burst"	"Weapon_FamilyBusiness.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+
 		
 //      Medic - Primary
 //		Blutsauger
@@ -3025,10 +3111,23 @@
 					"attribute_class"	"add_onhit_addhealth"
 					"value"	"3"
 				}
+
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.85"
+				}
+
 				"health drain medic"
 				{
 					"attribute_class"	"add_health_regen"
-					"value"	"-2"
+					"value"	"-3"
+				}
+
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.75"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -3075,7 +3174,13 @@
 				"min_viewmodel_offset"		"10 0 -14"				
 			}
 			"attributes"
-			{
+			{	
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value"	"1"
+				}
+
 				"move speed bonus resource level"
 				{
 					"attribute_class"	"mult_player_movespeed_resource_level"
@@ -3090,6 +3195,12 @@
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.85"
+				}
+				
+				"mult_dmgtaken_active"
+				{
+					"attribute_class"	"mult_dmgtaken_active"
+					"value"	"1.2"
 				}
 			}
 			"visuals"
@@ -3466,6 +3577,89 @@
 			{
 				"sound_single_shot"	"Weapon_Letranger.Single"
 				"sound_burst"	"Weapon_Letranger.SingleCrit"
+			}
+		}
+
+//      Spy - Secondary
+//		Enforcer
+//      ____________________________________________
+
+		"460"
+		{
+			"name"	"L'Exécuteur"
+			"item_class"	"tf_weapon_revolver"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_name"	"L'Exécuteur"
+			"item_description"	"A sluggish weapon."
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"propername"	"0"
+			"item_logname"	"enforcer"
+			"item_iconname"	"enforcer"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_snub_nose/c_snub_nose"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"32"
+			"model_player"	"models/workshop/weapons/c_models/c_snub_nose/c_snub_nose.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"				
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"attributes"
+			{
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value" "8"
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.05"
+				}
+
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.2"
+				}
+
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" "2.0"
+				}
+
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "0.33"
+				}
+	
+				
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Enforcer.Single"
+				"sound_burst"	"Weapon_Enforcer.SingleCrit"
 			}
 		}
 
