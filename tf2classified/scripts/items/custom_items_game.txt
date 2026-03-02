@@ -613,37 +613,36 @@
 
 
 //      Scout - Melee
-//		Wrap Assassin
+//		Boston Basher
 //      ____________________________________________
 
-		"648"
+		"325"
 		{
-			"name"	"The Wrap Assassin"
-			"item_class"	"tf_weapon_bat_giftwrap"
+			"name"	"The Boston Basher"
+			"item_class"	"tf_weapon_bat"
 			"tags"
 			{
 				"can_deal_damage"			"1"
 				"can_deal_posthumous_damage"	"1"
 				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bat"
-			"item_name"	"#TF_BallBuster"
-			"item_description"	"Keep ya blood to yourself, idiot!"
-			"item_logname"	"wrap_assassin"
-			"item_iconname"	"wrap_assassin"
+			"item_name"	"#TF_BostonBasher"
+			"item_description"	"Keep ya blood to yourself, moron!"
+			"item_logname"	"boston_basher"
+			"item_iconname"	"boston_basher"
 			"item_slot"	"melee"
 			"item_quality"	"unique"
 			"propername"	"1"
-			"min_ilevel"	"15"
-			"max_ilevel"	"15"
+			"min_ilevel"	"25"
+			"max_ilevel"	"25"
 			"attach_to_hands"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_xms_giftwrap/c_xms_giftwrap"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_boston_basher/c_boston_basher"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"inspect_panel_dist"        "45"			
-			"model_player"	"models/workshop/weapons/c_models/c_xms_giftwrap/c_xms_giftwrap.mdl"
+			"inspect_panel_dist"        "45"
+			"model_player"	"models/workshop/weapons/c_models/c_boston_basher/c_boston_basher.mdl"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -652,54 +651,28 @@
 			{
 				"min_viewmodel_offset"					"10 0 -6"
 			}
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"		"ui/item_wood_pole_drop.wav"
 			"attributes"
 			{
-				
-				"mod bat launches ornaments"
+				"bleeding duration"
 				{
-					"attribute_class"	"set_weapon_mode"
+					"attribute_class"	"bleeding_duration"
+					"value" "5"
+				}
+				"hit self on miss"
+				{
+					"attribute_class"	"hit_self_on_miss"
 					"value"	"1"
 				}
-				
-				"effect bar recharge rate increased"
-				{
-					"attribute_class"	"effectbar_recharge_rate"
-					"value" "0.75"
-				}
 
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.35"
-				}
 			}
 			"visuals"
 			{
-				"sound_deploy"			"BallBuster.Ornament_DrawCatch"
-				"sound_melee_hit"		"BallBuster.HitFlesh"
-				"sound_melee_hit_world"	"BallBuster.HitWorld"
-				"sound_special2"		"BallBuster.HitBall"
+				"sound_melee_hit"		"BostonBasher.Impact"
+				"sound_melee_hit_world"	"BostonBasher.HitWorld"
 			}
-			"visuals_red"
-			{
-				"skin"	"2"
-				"sound_deploy"			"BallBuster.Ornament_DrawCatch"
-				"sound_melee_hit"		"BallBuster.HitFlesh"
-				"sound_melee_hit_world"	"BallBuster.HitWorld"
-				"sound_special2"		"BallBuster.HitBall"
-			}
-			"visuals_blu"
-			{
-				"skin"	"1"
-				"sound_deploy"			"BallBuster.Ornament_DrawCatch"
-				"sound_melee_hit"		"BallBuster.HitFlesh"
-				"sound_melee_hit_world"	"BallBuster.HitWorld"
-				"sound_special2"		"BallBuster.HitBall"
-			}
-			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
-			"drop_sound"			"ui/item_cardboard_drop.wav"
 		}
-
 
 //      Soldier - Primary
 //		Black Box
@@ -2984,6 +2957,7 @@
 				}
 			}
 		}
+
 		
 //      Medic - Primary
 //		Blutsauger
@@ -3060,7 +3034,6 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		
 		
 //      Medic - Primary
 //		Overdose
@@ -3285,6 +3258,62 @@
 			"xifier_class_remap"	"jarate"
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"		"ui/item_bottle_drop.wav"
+		}
+
+//      Sniper - Melee
+//		Shahahanshash
+//      ____________________________________________
+
+		"401"
+		{
+			"name"	"The Shahanshah"
+			"particle_suffix"	"shahanshah"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_club"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_logname"	"shahanshah"
+			"item_iconname"	"shahanshah"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Club"
+			"item_name"	"#TF_Shahanshah"
+			"item_description"	"Even more dangerous up close!"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_scimitar/c_scimitar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_scimitar/c_scimitar.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"				"10 0 -6"			
+			}
+			"attributes"
+			{
+				"dmg bonus while half dead"
+				{
+					"attribute_class"	"mult_dmg_bonus_while_half_dead"
+					"value"	"1.25"
+				}
+				"dmg penalty while half alive"
+				{
+					"attribute_class"	"mult_dmg_penalty_while_half_alive"
+					"value"	"0.75"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		
 		
