@@ -694,6 +694,12 @@
 					"attribute_class"	"hit_self_on_miss"
 					"value"	"1"
 				}
+
+				"mod allow self dmg dot weapon"
+				{
+					"attribute_class"	"mod_allow_self_dmg_dot_weapon"
+					"value"	"1"
+				}
 			
 
 			}
@@ -1234,6 +1240,7 @@
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
+
 			}
 			"mouse_pressed_sound"	"ui/item_shovel_pickup.wav"
 			"drop_sound"		"ui/item_shovel_drop.wav"
