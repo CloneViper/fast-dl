@@ -218,6 +218,29 @@
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			
 		}
+
+
+		"weapon_executeur"
+		{
+			"enabled"	"1"
+			"item_class"	"tf2c_weapon_tranq"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"show_in_armory"	"1"
+			"attach_to_hands" "1"
+			"model_player"	"models/weapons/v_models/v_revolver_spy.mdl"
+			"model_world"	"models/weapons/w_models/w_revolver.mdl"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+		}
+
 	}
 
 	"attributes"
@@ -226,6 +249,14 @@
         	{
             		"name"                    "lunchbox consumed on use"
             		"attribute_class"        "lunchbox_force_cooldown"
+            		"description_string"    "Item is consumed after use and recharges"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "negative"
+        	}
+
+		"15157"
+        	{
+            		"name"                    "lunchbox consumed on use DISPLAY ONLY"
             		"description_string"    "Item is consumed after use and recharges"
             		"description_format"    "value_is_additive"
             		"effect_type"            "negative"
@@ -240,6 +271,16 @@
             		"description_format"    "value_is_percentage"
             		"effect_type"            "positive"
         	}
+
+		"15159"
+        	{
+            		"name"                    "minicrit vs cond no dot DISPLAY ONLY"
+            		"description_string"    "Minicrits against slowed players"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "positive"
+        	}
+
+		
 	}
 
 	"items"
@@ -274,6 +315,11 @@
 				{
 					"attribute_class"	"single_minicrit_vs_playercond_no_dot"
 					"value"				"16"
+				}
+
+				"minicrit vs cond no dot DISPLAY ONLY"
+				{
+					"value"	"1"
 				}
 			}
 
@@ -1182,70 +1228,6 @@
 		}
 
 
-//      Soldier - Melee
-//		Market Gardener
-//      ____________________________________________
-
-		"416"
-		{
-			"name"	"The Market Gardener"
-			"item_class"	"tf_weapon_shovel"
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_critical_damage"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Shovel"
-			"item_name"	"#TF_MarketGardener"
-			"item_description"	"Shovel on the head makes 'em dead."
-			"item_logname"	"market_gardener"
-			"item_iconname"	"market_gardener"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"image_inventory" "backpack/workshop/weapons/c_models/c_market_gardener/c_market_gardener"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"45"
-			"model_player"	"models/workshop/weapons/c_models/c_market_gardener/c_market_gardener.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"soldier"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 -3 -11"
-			}
-			"attributes"
-			{
-				
-				"mod crit while airborne"
-				{
-					"attribute_class"	"crit_while_airborne"
-					"value"	"1"
-				}
-
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.2"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-
-			}
-			"mouse_pressed_sound"	"ui/item_shovel_pickup.wav"
-			"drop_sound"		"ui/item_shovel_drop.wav"
-		}
-
 //      Pyro - Primary
 //		Backburner
 //      ____________________________________________
@@ -2033,6 +2015,98 @@
 			}
 		}
 
+//      Heavy - Primary
+//		Natascha
+//      ____________________________________________
+
+		"41"
+		{
+			"name"	"Natascha"
+			"item_class"	"tf_weapon_minigun"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Minigun"
+			"item_name"	"#TF_Unique_Achievement_Minigun"
+			"item_description"	"Natascha. Fires fast, not accurate."
+			"item_slot"	"primary"
+			"item_logname"	"natascha"
+			"item_iconname"	"natascha"
+			"image_inventory"	"backpack/weapons/c_models/c_w_ludmila/c_w_ludmila"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_minigun/c_minigun_natascha.mdl"
+			"inspect_panel_dist" "88"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"attributes"
+			{	
+				
+				"aiming movespeed increased"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+
+				}
+		
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.6"
+
+				}
+
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.25"
+
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.8"
+				}
+
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.75"
+				}
+				
+				
+			}
+			"visuals"
+			{
+				"sound_reload"	"Weapon_Minifun.Reload"
+				"sound_empty"	"Weapon_Minifun.ClipEmpty"
+				"sound_double_shot"	"Weapon_Minifun.Fire"
+				"sound_special1"	"Weapon_Minifun.WindUp"
+				"sound_special2"	"Weapon_Minifun.WindDown"
+				"sound_special3"	"Weapon_Minifun.Spin"
+				"sound_burst"	"Weapon_Minifun.FireCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+
+
 
 //      Heavy - Primary
 //		Brass Beast
@@ -2104,7 +2178,7 @@
 				"minigun spinup time increased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
-					"value" "1.5"
+					"value" "1.4"
 				}
 				"aiming movespeed decreased"
 				{
@@ -2715,202 +2789,7 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-
 		
-//      Engineer - Primary
-//		Rescue Ranger
-//      ____________________________________________
-
-		"997"
-		{
-			"name"	"The Rescue Ranger"
-			"particle_suffix"	"rescue_ranger"
-			"enabled"	"1"
-			"item_class"	"tf_weapon_shotgun_building_rescue"
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_posthumous_damage"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_logname"	"rescue_ranger"
-			"item_iconname"	"rescue_ranger"
-			"item_type_name"	"#TF_Weapon_Shotgun"
-			"item_name"	"#TF_Weapon_Shotgun_Building_Rescue"
-			"item_description"	"Sentry staying up!"
-			"item_slot"	"primary"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"1"
-			"max_ilevel"	"100"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "45"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_tele_shotgun/c_tele_shotgun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_tele_shotgun/c_tele_shotgun.mdl"
-			"used_by_classes"
-			{
-				"engineer"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"			"10 0 -10"
-			}
-			"attributes"
-			{
-				"engineer building teleporting pickup"
-				{
-					"attribute_class"	"building_teleporting_pickup"
-					"value"	"100"
-				}
-				"arrow heals buildings"
-				{
-					"attribute_class"	"arrow_heals_buildings"
-					"value"				"60"
-				}
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"18" 
-				}
-				"mark for death on building pickup"
-				{
-					"attribute_class"	"mark_for_death_on_building_pickup"
-					"value"				"1"
-				}
-				"maxammo primary reduced"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.5"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"				"0.66"
-				}
-				"repair health to metal ratio DISPLAY ONLY"
-				{
-					"attribute_class"	"repair_health_to_metal_ratio_DISPLAY_ONLY"
-					"value"				"4"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_RescueRanger.Single"
-				"sound_burst"    "Weapon_RescueRanger.SingleCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-		}
-		
-		
-//      Engineer - Melee
-//		Gunslinger
-//      ____________________________________________
-
-		"142"
-		{
-			"name"	"The Gunslinger"
-			"item_class"	"tf_weapon_robot_arm"
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_destroy_sappers"		"1"
-				"can_deal_taunt_damage"		"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Robot_Arm"
-			"item_name"	"#TF_Unique_Robot_Arm"
-			"item_description"	"Sometimes you need a little less gun."
-			"item_slot"	"melee"
-			"equip_region"	"arms"
-			"item_quality"	"unique"
-			"anim_slot"	"item2"
-			"min_ilevel"	"15"
-			"max_ilevel"	"15"
-			"propername"	"1"
-			"item_logname"	"robot_arm"
-			"item_iconname"	"robot_arm_kill"
-			"image_inventory"	"backpack/weapons/gunslinger"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"40"
-			"attach_to_hands" "1"
-			"disable_backpack_inspect"	"1"
-			"used_by_classes"
-			{
-				"engineer"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 -2 -7"				
-			}
-			"attributes"
-			{
-				"gunslinger punch combo"
-				{
-					"attribute_class"	"gunslinger_punch_combo"
-					"value"				"1"
-				}
-				
-				"max health additive bonus"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "25"
-				}		
-				"engineer sentry build rate multiplier"
-				{
-					"attribute_class"	"sentry_build_rate_multiplier"
-					"value"		"2.5"
-				}
-	
-				"mod wrench builds minisentry"
-				{
-					"attribute_class"	"wrench_builds_minisentry"
-					"value"	"1"
-				}
-
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"3"									
-				}
-				"kill eater score type 2"
-				{
-					"attribute_class"	"kill_eater_score_type_2"
-					"value" 	"0"									
-				}
-				"special taunt"
-				{
-					"attribute_class"	"special_taunt"
-					"value" "1"
-				}
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"rightarm"			"1"
-				}
-				"animation_replacement"
-				{
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_ITEM2_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_ITEM2_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_ITEM2_VM_INSPECT_END"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_robot_arm_pickup.wav"
-			"drop_sound"		"ui/item_robot_arm_drop.wav"
-		}
 		
 //      Engineer - Melee
 //		Jaggot
@@ -3594,7 +3473,7 @@
 		"460"
 		{
 			"name"	"L'Exécuteur"
-			"item_class"	"tf_weapon_revolver"
+			"prefab"	"weapon_executeur"
 			"tags"
 			{
 				"can_deal_damage"			"1"
@@ -3605,7 +3484,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"L'Exécuteur"
-			"item_description"	"A sluggish weapon."
+			"item_description"	"A sluggish weapon. It fires syringe darts instead of bullet."
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"propername"	"0"
@@ -3630,7 +3509,8 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"attributes"
-			{
+			{	
+
 				"bleeding duration"
 				{
 					"attribute_class"	"bleeding_duration"
@@ -3640,13 +3520,7 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "0.05"
-				}
-
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.2"
+					"value" "0.1"
 				}
 
 				"Reload time increased"
@@ -3660,7 +3534,13 @@
 					"attribute_class"	"mult_maxammo_secondary"
 					"value" "0.33"
 				}
-	
+
+				"limited range"
+				{
+					"attribute_class"	"limited_range"
+					"value" "1"
+				}
+
 				
 			}
 			"visuals"
