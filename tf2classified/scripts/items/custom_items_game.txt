@@ -257,6 +257,7 @@
 		"15157"
         	{
             		"name"                    "lunchbox consumed on use DISPLAY ONLY"
+			"attribute_class"	"DISPLAY_ONLY"
             		"description_string"    "Item is consumed after use and recharges"
             		"description_format"    "value_is_additive"
             		"effect_type"            "negative"
@@ -275,9 +276,19 @@
 		"15159"
         	{
             		"name"                    "minicrit vs cond no dot DISPLAY ONLY"
+			"attribute_class"	"DISPLAY_ONLY"
             		"description_string"    "Minicrits against slowed players"
             		"description_format"    "value_is_additive"
             		"effect_type"            "positive"
+        	}
+
+		"15160"
+        	{
+            		"name"                    "clip size penalty DISPLAY ONLY"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "#Attrib_ClipSize_Negative"
+            		"description_format"    "value_is_percentage"
+            		"effect_type"            "negative"
         	}
 
 		
@@ -318,7 +329,8 @@
 				}
 
 				"minicrit vs cond no dot DISPLAY ONLY"
-				{
+				{	
+					"attribute_class"	"DISPLAY_ONLY"
 					"value"	"1"
 				}
 			}
@@ -3517,11 +3529,19 @@
 					"value" "8"
 				}
 
+				"clip size penalty DISPLAY ONLY"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"0.2"
+				}
+
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value" "0.1"
 				}
+
+				
 
 				"Reload time increased"
 				{
