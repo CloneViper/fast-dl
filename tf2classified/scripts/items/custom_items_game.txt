@@ -268,7 +268,7 @@
         	{
             		"name"                    "lunchbox healing increased"
             		"attribute_class"        "lunchbox_healing_scale"
-            		"description_string"    "#Attrib_LunchboxHealingDecreased"
+            		"description_string"    "Regains 300 health instead of 120 health"
             		"description_format"    "value_is_percentage"
             		"effect_type"            "positive"
         	}
@@ -291,6 +291,14 @@
             		"effect_type"            "negative"
         	}
 
+		"15161"
+		{
+			"name"					"build small sentries"
+			"attribute_class"		"build_small_sentries"
+			"description_string"	"Sentry guns are smaller and cost less to upgrade"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+		}
 		
 	}
 
@@ -351,7 +359,7 @@
 			"mouse_pressed_sound"	"ui/item_brick_pickup.wav"
 			"drop_sound"			"ui/item_pack_drop.wav"
 		}
-
+	
 //      Scout - Primary
 //		Force-A-Nature
 //      ____________________________________________
@@ -750,12 +758,6 @@
 				"hit self on miss"
 				{
 					"attribute_class"	"hit_self_on_miss"
-					"value"	"1"
-				}
-
-				"mod allow self dmg dot weapon"
-				{
-					"attribute_class"	"mod_allow_self_dmg_dot_weapon"
 					"value"	"1"
 				}
 			
@@ -2069,6 +2071,7 @@
 			"attributes"
 			{	
 				
+
 				"aiming movespeed increased"
 				{
 					"attribute_class"	"mult_dmg"
@@ -2492,7 +2495,7 @@
 			"name"				"The Sandvich"
 			"prefab"			"weapon_lunchbox"
 			"item_name"			"#TF_Weapon_Sandvich"
-			"item_description"	"Heals 300 HP when eaten. Come closer! I will give you taste."
+			"item_description"	"#TF_Weapon_Sandvich_Desc"
 			"item_quality"		"normal"
 			"propername"		"1"
 			"used_by_classes"
@@ -2885,6 +2888,8 @@
 				}
 			}
 		}
+
+
 
 //      Medic - Primary
 //		Battle Medic
