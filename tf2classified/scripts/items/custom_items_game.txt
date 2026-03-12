@@ -380,12 +380,6 @@
 					"value"	"1"
 				}
 
-				"mod use custom ammo type"
-                		{
-                    			"attribute_class"    "mod_use_custom_ammo_type"
-                    			"value"                "5"
-                		}
-
 				
 			}
 
