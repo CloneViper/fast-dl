@@ -228,7 +228,6 @@
 			"show_in_armory"	"1"
 			"attach_to_hands" "1"
 			"model_player"	"models/weapons/v_models/v_revolver_spy.mdl"
-			"model_world"	"models/weapons/w_models/w_revolver.mdl"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"min_ilevel"	"1"
