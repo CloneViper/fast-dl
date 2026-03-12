@@ -240,6 +240,28 @@
 				"spy"	"1"
 			}
 		}
+		// Not working
+		"weapon_minigun_fireball"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_rocketlauncher_fireball"
+			"item_type_name"	"#TF_Weapon_Minigun"
+			"show_in_armory"	"1"
+			"attach_to_hands" "1"
+			"model_player"	"models/weapons/v_models/v_minigun_heavy.mdl"
+			"model_world"	"models/weapons/w_models/w_minigun.mdl"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+
+		}
 
 	}
 
@@ -277,7 +299,7 @@
         	{
             		"name"                    "minicrit vs cond no dot DISPLAY ONLY"
 			"attribute_class"	"DISPLAY_ONLY"
-            		"description_string"    "Minicrits against slowed players"
+            		"description_string"    "100% mini-crits vs stunned players"
             		"description_format"    "value_is_additive"
             		"effect_type"            "positive"
         	}
@@ -296,6 +318,22 @@
 			"name"					"build small sentries"
 			"attribute_class"		"build_small_sentries"
 			"description_string"	"Sentry guns are smaller and cost less to upgrade"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+		}
+
+		"15162"
+		{
+			"name"					"airblast disabled NO DISPLAY"
+			"attribute_class"		"airblast_disabled"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+		}
+
+		"15163"
+		{
+			"name"					"mod flamethrower spinup time"
+			"attribute_class"		"mod_flamethrower_spinup_time"
 			"description_format"	"value_is_additive"
 			"effect_type"			"neutral"
 		}
@@ -341,6 +379,14 @@
 					"attribute_class"	"DISPLAY_ONLY"
 					"value"	"1"
 				}
+
+				"mod use custom ammo type"
+                		{
+                    			"attribute_class"    "mod_use_custom_ammo_type"
+                    			"value"                "5"
+                		}
+
+				
 			}
 
 			"model_player"				"models/weapons/v_models/v_brick_scout.mdl"
@@ -1832,6 +1878,7 @@
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"33"
 			"model_player"	"models/weapons/c_models/c_targe/c_targe.mdl"
+			"model_world"	"models/weapons/c_models/c_targe_rotated/c_targe.mdl"
 			"act_as_wearable" "1"
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
@@ -2120,7 +2167,6 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-
 
 
 //      Heavy - Primary
