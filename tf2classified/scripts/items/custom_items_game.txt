@@ -336,6 +336,15 @@
 			"description_format"	"value_is_additive"
 			"effect_type"			"neutral"
 		}
+
+		"15164"
+        	{
+            		"name"                    "dart override"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "Fires tranquilizer darts"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
 		
 	}
 
@@ -3545,7 +3554,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"L'Exécuteur"
-			"item_description"	"A sluggish weapon. It fires syringe darts instead of bullet."
+			"item_description"	"A sluggish weapon."
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"propername"	"0"
@@ -3571,6 +3580,12 @@
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"attributes"
 			{	
+
+				"dart override"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value" "1"
+				}
 
 				"bleeding duration"
 				{
@@ -3604,11 +3619,7 @@
 					"value" "0.33"
 				}
 
-				"limited range"
-				{
-					"attribute_class"	"limited_range"
-					"value" "1"
-				}
+				
 
 				
 			}
