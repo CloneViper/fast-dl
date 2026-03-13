@@ -345,6 +345,15 @@
             		"description_format"    "value_is_additive"
             		"effect_type"            "neutral"
         	}
+
+		"15165"
+        	{
+            		"name"                  "double donk text"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "Double Donk! Time your fuse to deal mini-crits!"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
 		
 	}
 
@@ -1744,6 +1753,12 @@
 					"attribute_class"	"grenade_not_explode_on_impact"
 					"value"				"1"
 				}
+				
+				"double donk text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
 
 
 				"kill eater score type 2"
@@ -2467,6 +2482,13 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
+
+				"lunchbox consumed on use"
+				{
+					"attribute_class"	"lunchbox_force_cooldown"
+					"value"				"1"
+				}
+
 				"special taunt"
 				{
 					"attribute_class"	"special_taunt"
@@ -2531,6 +2553,13 @@
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
 				}
+
+				"lunchbox consumed on use"
+				{
+					"attribute_class"	"lunchbox_force_cooldown"
+					"value"				"1"
+				}
+
 				"energy buff dmg taken multiplier"
 				{
 					"attribute_class"	"energy_buff_dmg_taken_multiplier"
