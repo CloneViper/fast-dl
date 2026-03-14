@@ -3096,6 +3096,10 @@
 
 //      Engineer - Secondary
 //		Sharpshooter
+
+//	Credits to Dement for The Deputy model
+//	Credits to SilentFox3 for porting it (NOWP)
+//	
 //      ____________________________________________
 		"10000"
 		{

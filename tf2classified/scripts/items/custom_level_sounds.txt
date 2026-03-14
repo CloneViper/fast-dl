@@ -1,0 +1,15 @@
+"Weapon_Deputy.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/deputy_shoot.wav"
+}
+
+"Weapon_Deputy.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/deputy_shoot_crit.wav"
+}
