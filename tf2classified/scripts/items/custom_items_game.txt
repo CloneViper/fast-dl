@@ -485,6 +485,18 @@
             		"effect_type"            "neutral"
         	}
 
+		"15181"
+        	{
+            		"name"                    "impact explosion"
+			"attribute_class"	"set_detonate_mode"
+            		"description_string"    "Launched bombs explode on impact"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "positive"
+        	}
+
+
+		
+
 	}
 
 	"items"
@@ -1825,8 +1837,8 @@
 				}
 			}
 		}
-		
-		
+
+
 //      Demoman - Primary
 //		Loose Cannon
 //      ____________________________________________
@@ -3082,6 +3094,52 @@
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 
+//      Engineer - Secondary
+//		Sharpshooter
+//      ____________________________________________
+		"10000"
+		{
+			"name"						"Sharpshooter"
+			"item_class"				"tf_weapon_revolver"
+			"item_slot"					"secondary"
+			"anim_slot"					"secondary"
+
+			"propername"				"1"
+			"item_quality"				"unique"
+			"item_name"					"Sharpshooter"
+			"item_type_name"			"#TF_Weapon_Revolver"
+			"bucket"                    "1"
+			"bucket_position"            "0"
+			"item_description"			"Start prayin', son."
+			"item_logname"				"engineer_revolver"
+			"item_iconname"				"sixshooter"
+			
+			"model_player"				"models/weapons/c_models/deputy/v_sixshooter_engineer.mdl"
+			"model_world"				"models/weapons/c_models/deputy/w_sixshooter.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"engineer"				"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -6"
+			}
+
+			"attributes"
+			{
+
+				
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Deputy.Single"
+				"sound_burst"			"Weapon_Deputy.SingleCrit"
+			}
+			"image_inventory"			"backpack/weapons/w_models/w_sixshooter"
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
+		}
 		
 //      Engineer - Melee
 //		Jag
