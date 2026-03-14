@@ -1,5 +1,8 @@
 #base items_game.txt
 
+// Based on Jareb's Live Item Schema.
+// Thanks to Kiri for practically teaching me how to mess with item schema, and helping me with certain assets.
+
 "items_game"
 {	
 	"prefabs"
@@ -354,7 +357,134 @@
             		"description_format"    "value_is_additive"
             		"effect_type"            "neutral"
         	}
+
+		"15166"
+        	{
+            		"name"                  "faster recharge"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "#Attrib_EffectBarRechargeRateIncreased"
+            		"description_format"    "value_is_inverted_percentage"
+            		"effect_type"            "positive"
+        	}
+
+		"15167"
+        	{
+            		"name"                  "dalokah text"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "#TF_Lunchbox_Chocolate_desc"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
 		
+
+		"15168"
+        	{
+            		"name"                  "steak text"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "#TF_BuffaloSteak_Desc"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15169"
+        	{
+            		"name"                  "milk text"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "#TF_MadMilk_Desc"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15170"
+        	{
+            		"name"                  "base jumper text"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "Press 'JUMP' key in the air to deploy."
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15171"
+        	{
+            		"name"                  "backup text"
+			"attribute_class"	"DISPLAY_ONLY"
+            		"description_string"    "#TF_TheBattalionsBackup_Desc"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15172"
+        	{
+            		"name"                    "dragons fury launches fireballs short"
+            		"description_string"    "Launches fireballs that briefly ignite on impact"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "positive"
+        	}
+
+        	"15173"
+        	{
+            		"name"                    "damage bonus vs burning DISPLAY ONLY"
+            		"description_string"    "#Attrib_DmgBonusVsBurning"
+            		"description_format"    "value_is_percentage"
+            		"effect_type"            "positive"
+        	}
+
+        	"15174"
+        	{
+            		"name"                    "firerate bonus on hit DISPLAY ONLY"
+            		"description_string"    "+%s1% faster firing speed on hit"
+            		"description_format"    "value_is_inverted_percentage"
+            		"effect_type"            "positive"
+        	}
+
+        	"15175"
+        	{
+            		"name"                    "firerate penalty on airblast DISPLAY ONLY"
+            		"description_string"    "%s1% slower firing speed on airblast"
+            		"description_format"    "value_is_percentage"
+            		"effect_type"            "negative"
+        	}
+
+        	"15176"
+        	{
+            		"name"                    "dragons fury shared firerate explain"
+            		"description_string"    "Firing speed is shared between primary and alt-fire"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15177"
+        	{
+            		"name"                    "targe text"
+            		"description_string"    "#TF_Unique_Achievement_Shield_Desc"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15178"
+        	{
+            		"name"                    "eyelander text"
+            		"description_string"    "#TF_Unique_Achievement_Sword_Desc"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15179"
+        	{
+            		"name"                    "caber text"
+            		"description_string"    "Explodes on contact"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
+		"15180"
+        	{
+            		"name"                    "overdose text"
+            		"description_string"    "#TF_Overdose_Desc"
+            		"description_format"    "value_is_additive"
+            		"effect_type"            "neutral"
+        	}
+
 	}
 
 	"items"
@@ -617,7 +747,7 @@
 
 
 //      Scout - Secondary
-//		CUM
+//		Milk
 //      ____________________________________________
 
 		"222"
@@ -635,7 +765,7 @@
 			"base_item_name"	"Mad Milk"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Jar_Milk"
-			"item_description"	"#TF_MadMilk_Desc"
+			"item_description"	"Previous milkman is delivering again."
 			"item_name"	"#TF_MadMilk"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
@@ -667,6 +797,12 @@
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
 				}
+				"milk text"
+				{
+					"attribute_class" "DISPLAY_ONLY"
+					"value" "1"
+				}
+				
 				"extinguish reduces cooldown"
 				{
 					"attribute_class" "extinguish_reduces_cooldown"
@@ -940,7 +1076,7 @@
 
 
 //      Soldier - Primary
-//		Libertitty Launcher
+//		Liberty Launcher
 //      ____________________________________________
 
 		"414"
@@ -1030,7 +1166,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Battle_Banner"
 			"item_name"	"#TF_TheBattalionsBackup"
-			"item_description"	"#TF_TheBattalionsBackup_Desc"
+			"item_description"	"Unit's morale is all time high!"
 			"item_slot"	"secondary"
 			"equip_region"	"back"
 			"anim_slot"	"melee"
@@ -1075,6 +1211,12 @@
 				"allowed in medieval mode"
 				{
 					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+
+				"backup text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
 					"value"	"1"
 				}
 			}
@@ -1125,7 +1267,14 @@
 				"demoman"	"primary"
 			}
 			"attributes"
-			{
+			{	
+
+				"base jumper text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"1"
+				}
+
 				"parachute attribute"
 				{
 					"attribute_class"	"parachute_attribute"
@@ -1404,9 +1553,11 @@
 				"meter_label"							"#TF_Pressure"
 				"hidden primary max ammo bonus"			"0.2"
 				"airblast cost scale hidden"			"0.25"
-				"dragons fury positive properties"		"1"
-				"dragons fury negative properties"		"1"
-				"dragons fury neutral properties"		"1"
+				"dragons fury launches fireballs short"    "1"
+                		"damage bonus vs burning DISPLAY ONLY"    "4"
+                		"firerate bonus on hit DISPLAY ONLY"    "0.5"
+                		"firerate penalty on airblast DISPLAY ONLY"    "1.5"
+                		"dragons fury shared firerate explain"    "1"
 				
 			}
 			"visuals"
@@ -1437,7 +1588,7 @@
 
 		
 //      Pyro - Melee
-//		Powerjacking Off
+//		Powerjack
 //      ____________________________________________
 
 		"214"
@@ -1837,16 +1988,7 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.75"
 				}
-				"sticky detonate mode"
-				{
-					"attribute_class"	"set_detonate_mode"
-					"value"	"1"
-				}
-				"stickies detonate stickies"
-				{
-					"attribute_class"	"stickies_detonate_stickies"
-					"value"	"1"
-				}
+				
 				"maxammo secondary increased"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
@@ -1856,6 +1998,18 @@
 				{
 					"attribute_class"	"add_max_pipebombs"
 					"value" "6"
+				}
+
+				"stickies detonate stickies"
+				{
+					"attribute_class"	"stickies_detonate_stickies"
+					"value"	"1"
+				}
+
+				"sticky detonate mode"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"	"1"
 				}
 				"sticky arm time penalty"
 				{
@@ -1885,7 +2039,7 @@
 			"show_in_armory"	"1"
 			"item_type_name" 	"#TF_Wearable_Shield"
 			"item_name"		"#TF_Unique_Achievement_Shield"
-			"item_description"	"#TF_Unique_Achievement_Shield_Desc"
+			"item_description"	"Passed down from several generations, this antique shield is now his."
 			"item_slot"		"secondary"
 			"equip_region"	"arms"
 			"anim_slot"		"FORCE_NOT_USED"
@@ -1926,6 +2080,12 @@
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
 				}
+
+				"targe text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
 			"drop_sound"		"ui/item_wood_pole_drop.wav"
@@ -1954,7 +2114,7 @@
 			}
 			"base_item_name"	"The Eyelander"
 			"item_name"	"#TF_Unique_Achievement_Sword"
-			"item_description"	"#TF_Unique_Achievement_Sword_Desc"
+			"item_description"	"A possessed sword with a taste for heads."
 			"propername"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
 			"model_player"	"models/weapons/c_models/c_claymore/c_claymore.mdl"
@@ -2030,6 +2190,12 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+
+				"eyelander text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -2054,7 +2220,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_StickBomb"
 			"item_name"	"#TF_UllapoolCaber"
-			"item_description"	"Explodes on contact, kablooey!"
+			"item_description"	"A sober person would throw it..."
 			"item_logname"	"ullapool_caber"
 			"item_iconname"	"ullapool_caber"
 			"item_slot"	"melee"
@@ -2080,6 +2246,12 @@
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 			"attributes"
 			{
+				"caber text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"1"
+				}
+
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -2095,6 +2267,8 @@
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
+
+				
 			}
 		}
 
@@ -2211,7 +2385,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Minigun"
 			"item_name"	"#TF_GatlingGun"
-			"item_description"	"Oksana. Slow but strong."
+			"item_description"	"Oksana. Slow, but strong."
 			"item_slot"	"primary"
 			"item_logname"	"brass_beast"
 			"item_iconname"	"brass_beast"
@@ -2454,7 +2628,7 @@
 				"can_extinguish"		"1"
 			}
 			"item_name"	"#TF_Unique_Lunchbox_Chocolate"
-			"item_description" "#TF_Lunchbox_Chocolate_desc"
+			"item_description" "High on sugar and fat."
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_chocolate/c_chocolate"
 			"model_player"	"models/workshop/weapons/c_models/c_chocolate/c_chocolate.mdl"
 			"propername"	"1"
@@ -2483,6 +2657,13 @@
 					"value"	"1"
 				}
 
+				"faster recharge"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"0.666"
+				}
+
+
 				"lunchbox consumed on use"
 				{
 					"attribute_class"	"lunchbox_force_cooldown"
@@ -2499,11 +2680,18 @@
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
 				}
+
+				"dalokah text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"1"
+				}
+
 			}
 		}
 
 //      Heavy - Secondary
-//		Buffalo Buffalo Buffalo
+//		Buffalo Steak
 //      ____________________________________________
 
 		"311"
@@ -2515,7 +2703,7 @@
 				"can_heal_allies"		"1"
 			}
 			"item_name"	"#TF_BuffaloSteak"
-			"item_description"	"#TF_BuffaloSteak_Desc"
+			"item_description"	"(The company is not responsible for food poisoning)"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak"
 			"model_player"	"models/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak.mdl"
 			"propername"	"1"
@@ -2565,6 +2753,13 @@
 					"attribute_class"	"energy_buff_dmg_taken_multiplier"
 					"value"	"1.2"
 				}
+
+				"steak text"
+				{
+					"attribute_class"	"DSIPLAY_ONLY"
+					"value"				"1"
+				}
+
 			}
 		}
 
@@ -2886,10 +3081,10 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		
+
 		
 //      Engineer - Melee
-//		Jaggot
+//		Jag
 //      ____________________________________________
 
 		"329"
@@ -2991,7 +3186,7 @@
 			}
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"Kampfmediziner"
-			"item_description"	"Ze healing is not as rewarding as ze hurting"
+			"item_description"	"Ze healing is not as rewarding as ze hurting."
 			"prefab"	"weapon_shotgun"
 			"item_slot"	"primary"
 			"show_in_armory"	"1"
@@ -3139,7 +3334,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SyringeGun_Prototype"
 			"item_name"		"#TF_Overdose"
-			"item_description"	"#TF_Overdose_Desc"
+			"item_description"	"My heart is pounding!"
 			"item_slot"	"primary"
 			"image_inventory"	"backpack/weapons/c_models/c_proto_syringegun/c_proto_syringegun"
 			"image_inventory_size_w"		"128"
@@ -3186,6 +3381,12 @@
 				{
 					"attribute_class"	"mult_dmgtaken_active"
 					"value"	"1.2"
+				}
+
+				"overdose text"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -3288,7 +3489,7 @@
 		
 		
 //      Sniper - Secondary
-//		Piss
+//		Jarate
 //      ____________________________________________
 
 		"58"
@@ -3357,7 +3558,7 @@
 		}
 
 //      Sniper - Melee
-//		Shahahanshash
+//		Shahanshah
 //      ____________________________________________
 
 		"401"
@@ -3772,7 +3973,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Spy_Sapper"
 			"item_name"	"#TF_SD_Sapper"
-			"item_description"	"When psychological damage matters more than physical one."
+			"item_description"	"When psychological damage matters more than the physical type."
 			"item_slot"	"building"
 			"item_quality"	"unique"
 			"item_logname"	"recorder"
