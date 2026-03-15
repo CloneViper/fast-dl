@@ -15,7 +15,7 @@
 }
 
 
-"Weapon_Gatling.WindUp"	
+"Weapon_Gatling1.WindUp"	
 {
 	"channel"	"CHAN_WEAPON"
 	"soundlevel"	"SNDLVL_94dB"
