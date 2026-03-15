@@ -13,3 +13,12 @@
 	"volume"	"1.0"
 	"wave"		")weapons/deputy_shoot_crit.wav"
 }
+
+
+"Weapon_Gatling.WindUp"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/gatling_wind_up.wav"
+}
