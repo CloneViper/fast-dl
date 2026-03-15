@@ -1,0 +1,45 @@
+#base "mod_textures_tf2c.txt"
+
+"sprites/640_hud"
+{
+
+	TextureFileRefs
+	{
+		"dfile"
+		{
+			"prefix"		"d_"
+		}
+		"dnegfile"
+		{
+			"prefix"		"dneg_"
+		}
+	}
+	
+	TextureData
+	{
+		"natascha_TIP"    // (Renamed for Live compatability)
+        	{
+            		"dfile"        "HUD/d_images_tip"
+            		"dnegfile"    "HUD/dneg_images_tip"
+            		"x"            "128"
+            		"y"            "448"
+            		"width"        "75"
+            		"height"    "32"
+        	}
+
+        	"maxgun_TIP"    // (Renamed for Live compatability)
+        	{
+            		"dfile"        "HUD/d_images_tip"
+            		"dnegfile"    "HUD/dneg_images_tip"
+            		"x"            "128"
+            		"y"            "896"
+            		"width"        "75"
+            		"height"    "32"
+        	}	
+	
+	}
+}
+
+
+
+	
