@@ -523,6 +523,24 @@
 			"stored_as_integer"		"1"
 		}
 
+		"15185"
+		{
+			"name"					"full clip reload"
+			"attribute_class"		"set_scattergun_no_reload_single"
+			"description_string"    "The weapon realods its entire clip at once"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+		}
+
+		"15186"
+		{
+			"name"					"double vision explain"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"    "Fires two grenades that explode on impact simultaneously"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+
 	}
 
 	"items"
@@ -589,6 +607,7 @@
 			"mouse_pressed_sound"	"ui/item_brick_pickup.wav"
 			"drop_sound"			"ui/item_pack_drop.wav"
 		}
+
 	
 //      Scout - Primary
 //		Force-A-Nature
@@ -660,7 +679,7 @@
 					"attribute_class"	"mult_clipsize"
 					"value" "0.34"
 				}
-				"scattergun no reload single"
+				"full clip reload"
 				{
 					"attribute_class"	"set_scattergun_no_reload_single"
 					"value"	"1"
@@ -1236,6 +1255,7 @@
 					"attribute_class"	"mult_dmg"
 					"value" "0.75"
 				}
+
 			}
 			"visuals"
 			{
@@ -1900,6 +1920,7 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 0 -10"
+				
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -1939,6 +1960,130 @@
 				{
 					"attribute_class"	"grenade_no_spin"
 					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_LochnLoad.Single"
+				"sound_burst"			"Weapon_LochnLoad.SingleCrit"
+				"animation_replacement"
+				{
+					"ACT_RELOAD_START"		"ACT_PRIMARY_RELOAD_START_2"
+					"ACT_VM_RELOAD"			"ACT_PRIMARY_VM_RELOAD_2"
+					"ACT_RELOAD_FINISH"		"ACT_PRIMARY_RELOAD_FINISH_2"
+
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+		}
+
+//      Demoman - Primary
+//		Double Vision
+//      ____________________________________________
+
+		"10001"
+		{
+			"name"			"The Double Vision"
+			"enabled"		"1"
+			"item_class"		"tf_weapon_grenadelauncher"
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_logname"	"double_vision"
+			"item_iconname"	"double_barrel_grenadelauncher"
+			"item_type_name"	"Double-Barreled Grenade Launcher"
+			"item_name"		"Double Vision"
+			"item_description"	"Huh? There's a sight?"
+			"item_slot"		"primary"
+			"anim_slot"		"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"propername"		"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "55"
+			"image_inventory"	"backpack/weapons/w_models/w_double_barrel_grenadelauncher"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/custom_models/double_barrel_grenadelauncher/c_double_barrel_grenadelauncher.mdl"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+				
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+
+				"double vision explain"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value" "1"
+				}
+
+				"projectile spread angle penalty"
+				{
+					"attribute_class"	"projectile_spread_angle"
+					"value" "4"
+				}
+
+
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"0.75"
+				}
+				
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.5"
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.25"
+				}
+
+				//"grenade no spin"
+				//{
+				//	"attribute_class"	"grenade_no_spin"
+				//	"value"	"1"
+				//}
+
+				"hidden separator"	"1"
+
+				"auto fires full clip all at once"
+				{
+					"attribute_class"	"auto_fires_full_clip_all_at_once"
+					"value" "1"
+				}
+
+				"impact explosion"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"	"3"
 				}
 			}
 			"visuals"
@@ -2159,6 +2304,7 @@
 					"attribute_class"	"sticky_arm_time"
 					"value"	"0.8"
 				}
+
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -3037,7 +3183,7 @@
 			}
 			"hide_bodygroups_deployed_only"	"1"
 			"visuals"
-			{
+			{	
 				"player_bodygroups"
 				{
 					"hands"			"1"
@@ -3246,6 +3392,8 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+
+				
 			}
 			"visuals"
 			{
@@ -3743,7 +3891,13 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.80"
+					"value"	"0.8"
+				}
+
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
 				}
 
 				"special taunt"

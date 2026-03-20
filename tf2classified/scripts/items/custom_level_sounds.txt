@@ -20,5 +20,5 @@
 	"channel"	"CHAN_WEAPON"
 	"soundlevel"	"SNDLVL_94dB"
 	"volume"	"1.0"
-	"wave"		")weapons/gatling_wind_up.wav"
+	"wave"		")weapons/gatling1_wind_up.wav"
 }
