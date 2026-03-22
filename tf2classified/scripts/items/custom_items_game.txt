@@ -4449,6 +4449,82 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+
+//      Civilian - Gun
+//		Unescorted
+//      ____________________________________________
+
+		"10002"
+		{
+			"name"	"Unescorted"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_smg"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"Unescorted"
+			"item_description"	"Should've hired better mercenaries."
+			"item_slot"	"melee"
+			"bucket"                    "2"
+			"bucket_position"            "0"
+			"item_quality"	"unique"
+			"item_logname"	"unescorted"
+			"item_iconname"	"unescorted"
+			"image_inventory"	"backpack/weapons/w_models/w_smg_dm"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"25"
+			"anim_slot"	"secondary"
+			"attach_to_hands"	"2"
+			"propername"	"1"
+			"model_player"	"models/weapons/custom_models/v_smg_dm/v_smg_sniper.mdl"
+			"model_world"	"models/weapons/custom_models/w_smg_dm/w_smg.mdl"
+			"used_by_classes"
+			{
+				"civilian"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -7"
+			}
+			"attributes"
+			{
+
+				"mod sustained fire accuracy"
+				{
+					"attribute_class"	"mod_sustained_fire_accuracy"
+					"value"	"1.5 1.5"
+
+				}
+
+				"sustain accuracy penalty DISPLAY ONLY"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"	"1"
+
+				}
+
+				"hidden separator"	"1"
+
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"1.33"
+
+				}
+
+				
+			}
+
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_UrbanProfessional.Single"
+				"sound_burst"		"Weapon_UrbanProfessional.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+
+			
+		}
 		
 	}
 }
