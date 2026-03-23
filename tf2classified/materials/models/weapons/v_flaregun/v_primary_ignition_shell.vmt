@@ -1,0 +1,44 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\v_flaregun\v_primary_ignition_shell"
+
+ 
+	"$phong" "1"
+	"$phongexponent" "15"
+	"$phongboost" "8"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges"	"[.25 .5 1]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "10"	
+	"$rimlightboost" "0.5"
+
+	"$ambientocclusion" "1"
+
+	"$basemapalphaphongmask" "1"
+
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"weapon_invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+	}
+}
