@@ -38,3 +38,11 @@
 	"volume"	"1.0"
 	"wave"		")weapons/autoshot_shoot_crit.wav"
 }
+
+"Weapon_Garand.Empty"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/garand_empty.wav"
+}

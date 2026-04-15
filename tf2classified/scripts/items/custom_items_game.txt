@@ -2090,7 +2090,109 @@ Release Fire to unleash the barrage"
             }
 		}
 
+//      Soldier - Secondary
+//		Compatriot Eagle
+//      ____________________________________________
 
+		"10016"
+		{
+			"name"	"Panic Attack Shotgun"
+			"item_class"	"tf_weapon_revolver"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Rifle"
+			"item_name"	"Compatriot Eagle"
+			"item_description"	"See this gun? It's made to shoot commies like you!"
+			"item_logname"	"compatriot"
+			"item_iconname"	"garand"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"bucket"                    "1"
+			"bucket_position"            "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"99"
+			"propername"		"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
+			"image_inventory"	"backpack/weapons/w_models/w_garand"
+			"model_player"	"models/weapons/custom_models/c_garand/c_shotgun.mdl"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"			
+			}
+			"attributes"
+			{
+			
+				"hidden separator"	"1"
+				
+				"longer damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"	"1.5"
+				}
+			
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.15"
+				}
+			
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"1.33"
+				}
+			
+				"set reload single"
+				{
+					"attribute_class"	"set_reload_single"
+					"value"	"1"
+				}
+				
+				"Reload time start"
+				{
+					"attribute_class"	"mult_reload_time_start"
+					"value"	"1.005"
+				}
+				
+				"Reload time refill"
+				{
+					"attribute_class"	"mult_reload_time_refill"
+					"value"	"0.51"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_BackShot_Shotty.Single"
+				"sound_burst"			"Weapon_BackShot_Shotty.SingleCrit"
+				"sound_empty"			"Weapon_Garand.Empty"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			
+			"taunt"
+            {
+				"custom_taunt_scene_per_class"
+				{
+                    "Soldier"
+                    {
+                        "1"                "scenes/player/soldier/low/taunt02_v1.vcd"
+                    }
+				}
+            }
+		}
 
 //      Soldier/Demoman - Secondary
 //		Base Jumper
@@ -5073,6 +5175,8 @@ Release Fire to unleash the barrage"
 
 				
 			}
+			
+			"extra_wearable"	"models/player/items/medic/veteran_hat.mdl"
 			
 			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
 			"drop_sound"			"ui/item_medium_gun_drop.wav"
