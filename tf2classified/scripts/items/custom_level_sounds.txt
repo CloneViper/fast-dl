@@ -1,0 +1,40 @@
+"Weapon_Deputy.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/deputy_shoot.wav"
+}
+
+"Weapon_Deputy.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/deputy_shoot_crit.wav"
+}
+
+
+"Weapon_Gatling1.WindUp"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/gatling1_wind_up.wav"
+}
+
+"Weapon_Autoshot.Single"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/autoshot_shoot.wav"
+}
+
+"Weapon_Autoshot.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/autoshot_shoot_crit.wav"
+}
