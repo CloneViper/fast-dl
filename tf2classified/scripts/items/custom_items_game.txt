@@ -516,11 +516,11 @@
 
 		"15189"
 		{
-			"name"					"deflected projectile to ammo"
-			"attribute_class"		"airblast_turn_projectile_to_ammo"
-			"description_string"    "Deflected projectiles turn into small ammo packs"
+			"name"					"deflected no minicrit"
+			"attribute_class"		"mod_deflect_no_minicrit"
+			"description_string"    "Deflected projectiles don't deal mini-crits"
 			"description_format"	"value_is_additive"
-			"effect_type"			"neutral"
+			"effect_type"			"negative"
 		}
 
 		"15190"
@@ -811,6 +811,77 @@ Release Fire to unleash the barrage"
             "effect_type"			"neutral"
         }
 		
+		"15223"
+        {
+            "name"					"projectile range additive"
+			"attribute_class"		"mult_projectile_range"
+			"description_format"    "value_is_additive"
+            "effect_type"			"neutral"
+        }
+		
+		"15224"
+        {
+            "name"					"slower reload rate"
+			"attribute_class"		"fast_reload"
+			"description_string"    "%s1% slower reload rate"
+			"description_format"    "value_is_percentage"
+            "effect_type"			"negative"
+        }
+		
+		"15225"
+        {
+            "name"					"cloak and dagger explain"
+			"attribute_class"		"set_weapon_mode"
+			"description_string"    "Cloak Type: Motion Sensitive.
+Cloak drain rate based on movement speed."
+			"description_format"    "value_is_additive"
+            "effect_type"			"neutral"
+        }
+		
+		"15226"
+        {
+            "name"					"player scale increase wearer"
+			"attribute_class"		"mod_set_player_scale_on_wearer"
+			"description_string"    "%s1% increase in player scale on wearer"
+			"description_format"    "value_is_percentage"
+            "effect_type"			"negative"
+        }
+		
+		"15227"
+		{
+			"name"					"sustain accuracy bonus DISPLAY ONLY"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"    "Spread decreases while firing"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+        }
+		
+		"15228"
+		{
+			"name"					"sustain damage bonus DISPLAY ONLY"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"    "Damage increases while firing"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+        }
+		
+		"15229"
+		{
+			"name"					"minigun fire rate bonus"
+			"attribute_class"		"mul_nonrocketjump_attackrate"
+			"description_string"    "+%s1% faster firing speed"
+			"description_format"	"value_is_inverted_percentage"
+			"effect_type"			"positive"
+        }
+		
+		"15230"
+		{
+			"name"					"minigun fire rate"	// to make it work
+			"attribute_class"		"rocketjump_attackrate_bonus"
+			"description_format"	"value_is_inverted_percentage"
+			"effect_type"			"neutral"
+        }
+		
 	}
 
 	"items"
@@ -849,10 +920,10 @@ Release Fire to unleash the barrage"
 				}
 
 				"mod use custom ammo type"
-                		{
-                    			"attribute_class"    "mod_use_custom_ammo_type"
-                    			"value"                "5"
-                		}
+                {
+                    "attribute_class"    "mod_use_custom_ammo_type"
+                    "value"                "5"
+                }
 				
 			}
 
@@ -919,36 +990,43 @@ Release Fire to unleash the barrage"
 			}
 			"attributes"
 			{
-				"scattergun has knockback"
-				{
-					"attribute_class"	"set_scattergun_has_knockback"
-					"value"	"1"
-				}
+				
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.5"
 				}
+				
+				"scattergun has knockback"
+				{
+					"attribute_class"	"set_scattergun_has_knockback"
+					"value"	"1"
+				}
+				
 				"bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "1.2"
 				}
+				
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value" "0.9"
 				}
+				
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0.34"
 				}
+				
 				"full clip reload"
 				{
 					"attribute_class"	"set_scattergun_no_reload_single"
 					"value"	"1"
 				}
+				
 				"disable fancy class select anim"
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
@@ -1041,6 +1119,7 @@ Release Fire to unleash the barrage"
 					"attribute_class"	"mult_reload_time_hidden"
 					"value"	"1.25"
 				}
+				
 				"disable fancy class select anim"
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
@@ -1735,28 +1814,28 @@ Release Fire to unleash the barrage"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"Projectile speed increased"
-				{
-					"attribute_class"	"mult_projectile_speed"
-					"value"	"1.4"
-				}
-				
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "1.25"
 				}
 				
-				"self dmg push force increased"
+				"Projectile speed increased"
 				{
-					"attribute_class"	"mult_dmgself_push_force"
-					"value" "1.2"
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.4"
 				}
 				
 				"rocket jump damage reduction"
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
 					"value" "0.75"
+				}
+				
+				"self dmg push force increased"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" "1.2"
 				}
 				
 				"damage penalty"
@@ -1906,7 +1985,7 @@ Release Fire to unleash the barrage"
 			"show_in_armory"	"1"
 			"item_type_name"	"Mannhattan-Grade Rocket Launcher"
 			"item_name"	"Lunatic Nuker"
-			"item_description"	"Uranium is the american Australium!"
+			"item_description"	"Uranium is America's Australium!"
 			"item_slot"	"primary"
 			"item_quality"	"rarity4"
 			"item_logname"	"nuker"
@@ -1992,8 +2071,10 @@ Release Fire to unleash the barrage"
 			}
 			"visuals"
 			{
-				"sound_single_shot"		"Weapon_Airstrike.AltFire"
-				"sound_special1"		"Weapon_Airstrike.Explosion"
+				"sound_single_shot"		"Weapon_Nuker.Single"
+				"sound_burst"			"Weapon_Nuker.SingleCrit"
+				"sound_special1"		"Weapon_Nuker.Explosion"
+				
 			}
 		}
 
@@ -2552,6 +2633,14 @@ Release Fire to unleash the barrage"
 					"value"	"0.7"
 				}
 
+				"single wep deploy time decreased"
+				{
+					
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.4"
+				}
+				
+
 				"damage penalty"
 				{	
 					"attribute_class"	"mult_dmg"
@@ -2563,6 +2652,7 @@ Release Fire to unleash the barrage"
 					
 					"value"	"1.4"
 				}
+				
 				"mult airblast refire time"
 				{
 					
@@ -2578,14 +2668,12 @@ Release Fire to unleash the barrage"
 				}
 
 
-				"deflected projectile to ammo"
+				"deflected no minicrit"
 				{
-					"attribute_class"	"airblast_turn_projectile_to_ammo"
+					"attribute_class"	"mod_deflect_no_minicrit"
 					"value"	"1"
 				}
-
 				
-
 			}
 
 
@@ -2838,7 +2926,6 @@ Release Fire to unleash the barrage"
                 }
 			}
 		}
-
 
 //	Pyro - Secondary
 //		Wrist Twister
@@ -3162,21 +3249,23 @@ Release Fire to unleash the barrage"
 					"attribute_class"	"mult_dmg_vs_buildings"
 					"value"	"1.2"
 				}
+				
 				"Projectile speed increased"
 				{
 					"attribute_class"	"mult_projectile_speed"
 					"value" "1.25"
-				}
-				"Blast radius decreased"
-				{
-					"attribute_class"	"mult_explosion_radius"
-					"value"	"0.75"
 				}
 				
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0.75"
+				}
+				
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"0.75"
 				}
 
 				"sticky air burst mode"
@@ -3507,18 +3596,19 @@ Release Fire to unleash the barrage"
 					"attribute_class"	"add_max_pipebombs"
 					"value" "6"
 				}
+				
+				"sticky detonate mode"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"	"1"
+				}
 
 				"stickies detonate stickies"
 				{
 					"attribute_class"	"stickies_detonate_stickies"
 					"value"	"1"
 				}
-
-				"sticky detonate mode"
-				{
-					"attribute_class"	"set_detonate_mode"
-					"value"	"1"
-				}
+				
 				"sticky arm time penalty"
 				{
 					"attribute_class"	"sticky_arm_time"
@@ -3979,7 +4069,6 @@ Release Fire to unleash the barrage"
 			"attributes"
 			{	
 				
-
 				"aiming movespeed increased"
 				{
 					"attribute_class"	"mult_dmg"
@@ -3987,26 +4076,22 @@ Release Fire to unleash the barrage"
 
 				}
 		
-				"fire rate bonus"
+				"minigun fire rate bonus"
 				{
-					"attribute_class"	"mult_postfiredelay"
+					"attribute_class"	"mul_nonrocketjump_attackrate"
 					"value"	"0.6"
-
 				}
 				
-
 				"mod sustained fire accuracy"
 				{
 					"attribute_class"	"mod_sustained_fire_accuracy"
 					"value"	"1.35 2"
-
 				}
 
 				"sustain accuracy penalty DISPLAY ONLY"
 				{
 					"attribute_class"	"DISPLAY_ONLY"
 					"value"	"1"
-
 				}
 
 				"damage penalty"
@@ -4015,7 +4100,13 @@ Release Fire to unleash the barrage"
 					"value"	"0.45"
 				}
 				
+				"hidden separator"		"1" 
 				
+				"minigun fire rate"
+				{
+					"attribute_class"	"rocketjump_attackrate_bonus"
+					"value"	"0.6"
+				}
 			}
 			"visuals"
 			{
@@ -4087,23 +4178,25 @@ Release Fire to unleash the barrage"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"spunup_damage_resistance"
-				{
-					"attribute_class"		"spunup_damage_resistance"
-					"value"					"0.80"
-				}
-
+			
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"1.20"
 				}
 				
+				"spunup_damage_resistance"
+				{
+					"attribute_class"		"spunup_damage_resistance"
+					"value"					"0.80"
+				}
+
 				"minigun spinup time increased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
 					"value" "1.25"
 				}
+				
 				"aiming movespeed decreased"
 				{
 					"attribute_class"	"mult_player_aiming_movespeed"
@@ -4183,22 +4276,25 @@ Release Fire to unleash the barrage"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0.8"
-				}
 
 				"minigun spinup time decreased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
 					"value" "0.8"
 				}
+				
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.8"
+				}
+				
 				"minigun no spin sounds"
 				{
 					"attribute_class"	"minigun_no_spin_sounds"
 					"value" "1"
 				}
+				
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -4208,6 +4304,149 @@ Release Fire to unleash the barrage"
 			}
 		}
 
+//      Heavy - Primary
+//		Lunatic Heavyweight
+//      ____________________________________________
+		"10018"
+		{
+			"name" 		"Lunatic Heavyweight"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_minigun"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Bigrock-Grade Minigun"
+			"item_name"		"Lunatic Heavyweight"
+			"item_description"	"Who sent tiny men to fight?"
+			"item_slot"		"primary"
+			"item_logname"	"iron_curtain"
+			"item_iconname"	"iron_curtain"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_iron_curtain/c_iron_curtain"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_iron_curtain/c_iron_curtain.mdl"
+			"extra_wearable"	"models/player/items/heavy/heavy_ushanka.mdl"
+			"attach_to_hands"	"1"
+			"propername"		"1"
+			"item_quality"	"rarity4"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+				"full moon restricted display"			"1"
+			}	
+			"attributes"
+			{
+			
+				"weapon exclusive to holiday"
+				{
+					"attribute_class"	"weapon_exclusive_to_holiday"
+					"value"	"8"
+				}
+				
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"300"
+				}
+				
+				"attack projectiles"
+				{
+					"attribute_class"	"attack_projectiles"
+					"value"	"1"
+				}
+				
+				"accuracy scales damage"
+				{
+					"attribute_class"	"accuracy_scales_damage"
+					"value"	"1.2"
+				}
+				
+				"player scale increase wearer"
+				{
+					"attribute_class"	"mod_set_player_scale_on_wearer"
+					"value"	"1.75"
+				}
+				
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.5"
+				}
+				
+				"patient overheal penalty"
+				{
+					"attribute_class"	"mult_patient_overheal_penalty"
+					"value" "0.0"
+				}
+				
+				"no primary ammo from dispensers"
+				{
+					"attribute_class"	"no_primary_ammo_from_dispensers_always"
+					"value" "1"
+				}
+				
+				"hidden separator"	"1"
+				
+				"head scale"
+				{
+					"attribute_class"	"head_scale"
+					"value" "0.85"
+				}
+				
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value" "0.8"
+				}
+				
+				"no crit heals"			"1"
+				
+				"aiming movespeed decreased"
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value" "2"
+				}
+				
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"	"2"
+				}
+			
+			}
+			"visuals"
+			{
+			
+				"tracer_effect"	"bullet_tracer02"
+				
+				"sound_reload"	"Weapon_Gatling.Reload"
+				"sound_empty"	"Weapon_Gatling.ClipEmpty"
+				"sound_double_shot"	"MVM.GiantHeavyGunFire"
+				"sound_burst"		"MVM.GiantHeavyGunFire"
+				"sound_special1"	"MVM.GiantHeavyGunWindUp"
+				"sound_special2"	"MVM.GiantHeavyGunWindDown"
+				"sound_special3"	"MVM.GiantHeavyGunSpin"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_iron_curtain/c_iron_curtain_festivizer.mdl"
+					}
+				}
+			}
+			"xifier_class_remap"	"Iron Curtain"
+		}
 
 //      Heavy - Secondary
 //		Family Business
@@ -4465,7 +4704,7 @@ Release Fire to unleash the barrage"
 			{
 				"min_viewmodel_offset"			"10 0 -10"
 				"mult_player_movespeed_active"	"1.3"
-				"mod_maxhealth_drain_rate"		"10.0"
+				
 			}
 			"attributes"
 			{
@@ -4481,6 +4720,14 @@ Release Fire to unleash the barrage"
 					"attribute_class"	"mult_switch_from_wep_deploy_time"
 					"value"				"1.5"
 				}
+				
+				"mod_maxhealth_drain_rate"
+				{
+					"attribute_class"	"mod_maxhealth_drain_rate"
+					"value"				"10.0"
+				}
+				
+				
 			}
 			"hide_bodygroups_deployed_only"	"1"
 			"visuals"
@@ -4761,6 +5008,12 @@ Release Fire to unleash the barrage"
 					"value"	"2.0"
 				}
 
+				"single wep holster time increased"
+				{
+					"attribute_class"	"mult_switch_from_wep_deploy_time"
+					"value"				"2.0"
+				}
+	
 				"mult_patient_overheal_penalty_active"
 				{
 					"attribute_class"	"mult_patient_overheal_penalty_active"
@@ -4773,11 +5026,7 @@ Release Fire to unleash the barrage"
 					"value" "0.6"
 				}
 
-				"single wep holster time increased"
-				{
-					"attribute_class"	"mult_switch_from_wep_deploy_time"
-					"value"				"2.0"
-				}
+				
 			}
 
 			"visuals_red"
@@ -4921,21 +5170,27 @@ Release Fire to unleash the barrage"
 					"attribute_class"	"sentry_killed_revenge"
 					"value"	"1"
 				}
-				"lose revenge crits on death DISPLAY ONLY"
-				{
-					"attribute_class"	"lose_revenge_crits_on_death_DISPLAY_ONLY"
-					"value"	"1"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
+				
+				
+				
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0.5"
 				}
+				
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				
+				"lose revenge crits on death DISPLAY ONLY"
+				{
+					"attribute_class"	"lose_revenge_crits_on_death_DISPLAY_ONLY"
+					"value"	"1"
+				}
+				
 				"special taunt"
 				{
 					"attribute_class"	"special_taunt"
@@ -5013,6 +5268,7 @@ Release Fire to unleash the barrage"
 			{
 				"sound_single_shot"		"Weapon_Deputy.Single"
 				"sound_burst"			"Weapon_Deputy.SingleCrit"
+				
 			}
 			"image_inventory"			"backpack/weapons/w_models/w_sixshooter"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -5087,16 +5343,19 @@ Release Fire to unleash the barrage"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.85"
 				}
-				"Repair rate decreased"
-				{
-					"attribute_class"	"mult_repair_value"
-					"value"	"0.80"
-				}
+				
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.75"
 				}
+				
+				"Repair rate decreased"
+				{
+					"attribute_class"	"mult_repair_value"
+					"value"	"0.80"
+				}
+				
 				"dmg penalty vs buildings"
 				{
 					"attribute_class"	"mult_dmg_vs_buildings"
@@ -5538,16 +5797,18 @@ Release Fire to unleash the barrage"
 					"value" "1"
 				}
 				
-				"enables aoe heal"
-				{
-					"attribute_class"	"enables_aoe_heal"
-					"value"	"1"
-				}
 				"health regen"
 				{
 					"attribute_class"	"add_health_regen"
 					"value"	"3"
 				}
+				
+				"enables aoe heal"
+				{
+					"attribute_class"	"enables_aoe_heal"
+					"value"	"1"
+				}
+				
 				
 				"damage penalty"
 				{
@@ -5693,8 +5954,6 @@ Release Fire to unleash the barrage"
 			}
 			"visuals"
 			{
-				//"sound_single_shot"		"Weapon_BackShot_Shotty.Single"
-				//"sound_burst"			"Weapon_BackShot_Shotty.SingleCrit"
 				"sound_single_shot"		"Weapon_Autoshot.Single"
 				"sound_burst"			"Weapon_Autoshot.SingleCrit"
 			}
@@ -5713,7 +5972,113 @@ Release Fire to unleash the barrage"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		
+
+//      Sniper - Primary
+//		Crossbow
+//      ____________________________________________
+
+		"10017"
+		{
+			"name"		"The Melbourne Crossbow"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_sniperrifle"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Crossbow"
+			"item_name"	"Melbourne Crossbow"
+			"item_description"	"A man's first weapon."
+			"item_logname"	"melbourne_crossbow"
+			"item_iconname"	"huntsman"
+			"item_slot"	"primary"
+			"propername"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"15"
+			"max_ilevel"	"15"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"image_inventory"	"backpack/weapons/w_models/w_crossbow"
+			"model_player"	"models/weapons/custom_models/c_crossbow/c_sydney_sleeper.mdl"
+			"extra_wearable"	"models/player/items/sniper_arrows.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "60"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"				"5 0 -8"	
+				"class select override vcd"	"class_select_revrifle"
+			}
+			"attributes"
+			{
+				"sniper charge per sec"
+				{
+					"attribute_class"	"mult_sniper_charge_per_sec"
+					"value"	"1.5"
+				}
+				
+				"sniper full charge damage bonus"
+				{
+					"attribute_class"	"sniper_full_charge_damage_bonus"
+					"value"	"1.25"
+				}
+				
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_sniper_charge_per_sec"
+					"value"	"0.5"
+				}
+				
+				"slower reload rate"
+				{
+					"attribute_class"	"fast_reload"
+					"value"	"1.25"
+				}
+				
+				"hidden separator"		"1"
+				
+				"rocket gravity"
+				{
+					"attribute_class"	"mod_rocket_gravity"
+					"value"				"0.2"
+				}
+				
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.8"
+				}
+				
+				"projectile speed additive"	"400"
+				
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"	"35"
+				}
+				
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_MelbourneCrossbow.Single"
+				"sound_burst" 		"Weapon_MelbourneCrossbow.SingleCrit"
+				"sound_special3"	"Weapon_MelbourneCrossbow.Single"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+
 		
 //      Sniper - Secondary
 //		Jarate
@@ -5893,11 +6258,6 @@ Release Fire to unleash the barrage"
 					"value"	"1"
 				}
 
-				"crit_dmg_falloff"
-				{
-					"attribute_class"	"crit_dmg_falloff"
-					"value" "1"
-				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
@@ -5912,6 +6272,12 @@ Release Fire to unleash the barrage"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
+				}
+				
+				"crit_dmg_falloff"
+				{
+					"attribute_class"	"crit_dmg_falloff"
+					"value" "1"
 				}
 			}
 			
@@ -6038,16 +6404,17 @@ Release Fire to unleash the barrage"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"attributes"
 			{
-				"add cloak on hit"
-				{
-					"attribute_class"	"add_cloak_on_hit"
-					"value" "15"
-				}
-
+			
 				"cloak consume rate decreased"
 				{
 					"attribute_class"	"mult_cloak_meter_consume_rate"
 					"value" "0.6"
+				}
+				
+				"add cloak on hit"
+				{
+					"attribute_class"	"add_cloak_on_hit"
+					"value" "15"
 				}
 
 				"damage penalty"
@@ -6247,7 +6614,67 @@ Release Fire to unleash the barrage"
 			}
 		}
 		
-		
+//      Spy - Watch
+//		Cloak And Dagger
+//      ____________________________________________
+
+		"60"
+		{
+			"name"	"The Cloak and Dagger"
+			"item_class"	"tf_weapon_invis"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Watch"
+			"item_name"	"#TF_Unique_Achievement_CloakWatch"
+			"item_description"	"Patiently waiting for his prey."
+			"item_slot"	"pda2"
+			"anim_slot" "FORCE_NOT_USED"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_leather_watch/parts/c_leather_watch"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_watch_leather_spy.mdl"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"8 0 -6"
+			}
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"58" 
+				}
+				"cloak and dagger explain"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"2"
+				}
+				"mult cloak meter regen rate"
+				{
+					"attribute_class"	"mult_cloak_meter_regen_rate"
+					"value"	"2.0"
+				}
+				"NoCloakWhenCloaked"
+				{
+					"attribute_class"	"NoCloakWhenCloaked"
+					"value"	"1"
+				}
+				"ReducedCloakFromAmmo"
+				{
+					"attribute_class"	"ReducedCloakFromAmmo"
+					"value"	"0.65"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_watch_pickup.wav"
+			"drop_sound"		"ui/item_watch_drop.wav"
+		}
 		
 //      Spy - Building
 //		Reverser
