@@ -882,6 +882,33 @@ Cloak drain rate based on movement speed."
 			"effect_type"			"neutral"
         }
 		
+		"15231"
+		{
+			"name"					"umbrella recharge rate decreased"
+			"attribute_class"		"umbrella_recharge_rate"
+			"description_string"	"%s1% decrease in recharge rate"
+			"description_format"	"value_is_inverted_percentage"
+			"effect_type"			"negative"
+        }
+		
+		"15232"
+		{
+			"name"					"health insurance explain"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"Alt-fire: Give mega-heal boost to a teammate"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+        }
+		
+		"15233"
+		{
+			"name"					"shorter boost explain"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"Shorter boost duration"
+			"description_format"	"value_is_additive"
+			"effect_type"			"negative"
+        }
+		
 	}
 
 	"items"
@@ -2628,14 +2655,12 @@ Cloak drain rate based on movement speed."
 
 				"switch from wep deploy time decreased"
 				{
-					
 					"attribute_class"	"mult_switch_from_wep_deploy_time"
 					"value"	"0.7"
 				}
 
 				"single wep deploy time decreased"
 				{
-					
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.4"
 				}
@@ -2655,14 +2680,12 @@ Cloak drain rate based on movement speed."
 				
 				"mult airblast refire time"
 				{
-					
 					"attribute_class"	"mult_airblast_refire_time"
 					"value"	"1.4"
 				}
 
 				"mult airblast primary refire time"
 				{
-					
 					"attribute_class"	"mult_airblast_primary_refire time"
 					"value"	"0.72"
 				}
@@ -6890,6 +6913,13 @@ Cloak drain rate based on movement speed."
 				}
 
 				"hidden separator"	"1"
+				
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"1.33"
+				}
+				
 			}
 
 			"visuals"
@@ -6911,6 +6941,62 @@ Cloak drain rate based on movement speed."
 
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		
+//      Civilian - Melee
+//		Health Insurance
+//      ____________________________________________
+		
+		"10020"
+		{
+			"name"				"Health Insurance"
+			"item_name"			"Health Insurance"
+			"enabled"	"1"
+			"item_type_name"	"#TF_Weapon_Bust"
+			"item_description"	"(Dental not included)"
+			"item_quality"		"unique"
+			"show_in_armory"	"1"
+
+			"item_logname"	"health_insurance"
+			"item_iconname"	"solemn_vow"
+			"image_inventory_size_w"		"180"
+			"image_inventory_size_h"		"115"
+			"inspect_panel_dist" 			"150"
+			"item_class"	"tf2c_weapon_umbrella"
+			"item_slot"		"melee"
+			"attach_to_hands"	"2"
+			"propername"	"1"
+			"model_player"	"models/weapons/custom_models/v_solemn_vow/v_hippocrates_bust_medic.mdl"
+			"model_world"	"models/weapons/custom_models/w_solemn_vow/w_hippocrates_bust.mdl"
+			"image_inventory"	"backpack/weapons/c_models/c_hippocrates_bust/c_hippocrates_bust"
+			"used_by_classes"
+			{
+				"Civilian"	"1"
+			}
+			"attributes"
+			{
+			
+				"health insurance explain"		"1"
+
+				"umbrella recharge rate decreased"
+				{
+					"attribute_class"	"umbrella_recharge_rate"
+					"value"				"1.5"
+				}
+				"civ boost cond override"
+				{
+					"attribute_class"	"add_civ_boost_override"
+					"value"				"TF_COND_HALLOWEEN_QUICK_HEAL 0.25"
+				}
+				
+				"shorter boost explain"		"1"
+				
+				"disable fancy class select anim"
+				{
+					"attribute_class"	"disable_fancy_class_select_anim"
+					"value"	"1"
+				}
+			}
 		}
 	}
 }
