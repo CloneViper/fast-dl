@@ -707,7 +707,7 @@ Release Fire to unleash the barrage"
 		
 		"15211"
         {
-            "name"					"nuker self die"
+            "name"					"nukesalot self die"
 			"attribute_class"		"DISPLAY_ONLY"
 			"description_string"    "Instantly dies in self-inflicted explosions"
 			"description_format"    "value_is_additive"
@@ -909,6 +909,61 @@ Cloak drain rate based on movement speed."
 			"effect_type"			"negative"
         }
 		
+		"15234"
+		{
+			"name"					"blast radius additive"
+			"attribute_class"		"mult_explosion_radius"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+        }
+		
+		"15235"
+		{
+			"name"					"mod explosive bullet delay time"
+			"attribute_class"		"mod_explosive_bullet_delay_time"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+        }
+		
+		"15236"
+		{
+			"name"					"super scattergun explain"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"Fires both barrels simultaneously
+Loaded with explosive shells"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+        }
+		
+		"15237"
+		{
+			"name"					"nukesalot explain"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"Fires atomic bombs"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+        }
+		
+		"15238"
+		{
+			"name"					"grenadier explain"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"Fires mini-atomic bombs
+Hold Fire to load up to ten grenades
+Release Fire to unleash the barrage"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+        }
+		
+		"15239"
+		{
+			"name"					"switch disabled"
+			"attribute_class"		"disable_weapon_switch"
+			"description_string"	"Can't switch weapons"
+			"description_format"	"value_is_additive"
+			"effect_type"			"negative"
+        }
+		
 	}
 
 	"items"
@@ -969,6 +1024,185 @@ Cloak drain rate based on movement speed."
 			"image_inventory"		"backpack/weapons/w_models/w_brick"
 			"mouse_pressed_sound"	"ui/item_brick_pickup.wav"
 			"drop_sound"			"ui/item_pack_drop.wav"
+		}
+		
+//      Scout - Primary
+//		Lunatic Super Scattergun
+//      ____________________________________________
+
+		"10020"
+		{
+			"name"	"Lunatic Super Shotgun"
+			"particle_suffix"	"soda_popper"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_scattergun"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_gib_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Mannhattan-Grade Scattergun"
+			"item_name"	"Lunatic Super Scattergun"
+			"item_description"	"There aren't any demons here."
+			"item_logname"	"lunatic_super_scattergun"
+			"item_iconname"	"soda_popper"
+			"item_slot"	"primary"
+			"anim_slot"	"item2"
+			"item_quality"	"rarity4"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_soda_popper/c_soda_popper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_soda_popper/c_soda_popper.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "34"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+				"weapon_stattrak_module_scale"				"0.5"
+			}
+			"attributes"
+			{
+			
+				"full moon restricted display"			"1"	
+				"super scattergun explain"				"1"
+				
+				"weapon exclusive to holiday"
+				{
+					"attribute_class"	"weapon_exclusive_to_holiday"
+					"value"	"8"
+				}
+				
+				"blast radius additive"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"135"
+				}
+				
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.75"
+				}
+				
+				"auto jumping"
+				{
+					"attribute_class"	"auto_jumping"
+					"value" "1"
+				}
+				
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.34"
+				}
+				
+				"no double jump"
+				{
+					"attribute_class"	"set_scout_doublejump_disabled"
+					"value" "1"
+				}
+				
+				"full clip reload"
+				{
+					"attribute_class"	"set_scattergun_no_reload_single"
+					"value"	"1"
+				}
+				
+				"disable fancy class select anim"
+				{
+					"attribute_class"	"disable_fancy_class_select_anim"
+					"value"	"1"
+				}
+				
+				"hidden separator"		"1"
+				
+				"duck jumping"
+				{
+					"attribute_class"	"duck_jumping"
+					"value"	"1"
+				}
+				
+				"explosive bullets"
+				{
+					"attribute_class"	"explosive_bullets"
+					"value"	"1"
+				}
+				
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"				"1.4"
+				}
+				
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"				"0.4"
+				}
+				
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"4"
+				}
+				
+				"damage blast push"
+				{
+					"attribute_class"	"damage_blast_push"
+					"value"				"1"
+				}
+				
+				"mod ammo per shot"
+				{
+					"attribute_class"	"mod_ammo_per_shot"
+					"value"				"2"
+				}
+				
+				"self dmg push force increased"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" "3"
+				}
+				
+				"mod explosive bullet delay time"        "-2"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"					"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_DRAW"					"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_HOLSTER"				"ACT_ITEM2_VM_HOLSTER"
+					"ACT_VM_PULLBACK"				"ACT_ITEM2_VM_PULLBACK"
+					"ACT_VM_PRIMARYATTACK"			"ACT_ITEM2_VM_PRIMARYATTACK"
+					"ACT_VM_SECONDARYATTACK"		"ACT_ITEM2_VM_SECONDARYATTACK"
+					"ACT_VM_RELOAD"					"ACT_ITEM2_VM_RELOAD"
+					"ACT_VM_DRYFIRE"				"ACT_ITEM2_VM_DRYFIRE"
+					"ACT_VM_IDLE_TO_LOWERED"		"ACT_ITEM2_VM_IDLE_TO_LOWERED"
+					"ACT_VM_IDLE_LOWERED"			"ACT_ITEM2_VM_IDLE_LOWERED"
+					"ACT_VM_LOWERED_TO_IDLE"		"ACT_ITEM2_VM_LOWERED_TO_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_START"	"ACT_ITEM2_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"	"ACT_ITEM2_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"	"ACT_ITEM2_VM_INSPECT_END"
+				}
+				"sound_single_shot"	"Weapon_Soda_Popper.Single"
+				"sound_burst"	"Weapon_Soda_Popper.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 
 	
@@ -1878,7 +2112,9 @@ Cloak drain rate based on movement speed."
 				"sound_burst"	"Weapon_Liberty_Launcher.SingleCrit"
 			}
 		}
-		
+
+//		Credits to Haau and Uncle Doe
+
 //      Soldier - Primary
 //		Monroe Doctrine
 //      ____________________________________________
@@ -1992,12 +2228,12 @@ Cloak drain rate based on movement speed."
 		}
 		
 //      Soldier - Primary
-//		Lunatic Nuker
+//		Lunatic Nukesalot
 //      ____________________________________________
 
 		"10013"
 		{
-			"name"	"Lunatic Nuker"
+			"name"	"Lunatic Nukesalot"
 			"particle_suffix"	"air_strike"
 			"item_class"	"tf_weapon_rocketlauncher"
 			"tags"
@@ -2011,11 +2247,11 @@ Cloak drain rate based on movement speed."
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"Mannhattan-Grade Rocket Launcher"
-			"item_name"	"Lunatic Nuker"
+			"item_name"	"Lunatic Nukesalot"
 			"item_description"	"Uranium is America's Australium!"
 			"item_slot"	"primary"
 			"item_quality"	"rarity4"
-			"item_logname"	"nuker"
+			"item_logname"	"lunatic_nukesalot"
 			"item_iconname"	"airstrike"
 			"propername"	"1"
 			"min_ilevel"	"25"
@@ -2035,13 +2271,12 @@ Cloak drain rate based on movement speed."
 				"min_viewmodel_offset"					"10 -3 -10"
 				"full moon restricted display"			"1"
 				"rocket gravity"						"0.4"
-				"damage bonus"							"1.5"
-				"Blast radius increased"				"2"
+				"nukesalot explain"						"1"
 				
 				"Projectile speed decreased"			"0.5"
 				"clip size penalty"						"0.25"
 				"Reload time increased"					"2"
-				"nuker self die"						"1"
+				"nukesalot self die"					"1"
 				
 				
 				
@@ -2087,6 +2322,9 @@ Cloak drain rate based on movement speed."
 					"value"				"1"
 				}
 				
+				"damage bonus"							"2"
+				"Blast radius increased"				"2"
+				
 				"provide on active"	"1"
 				
 				"use large smoke explosion"
@@ -2098,9 +2336,9 @@ Cloak drain rate based on movement speed."
 			}
 			"visuals"
 			{
-				"sound_single_shot"		"Weapon_Nuker.Single"
-				"sound_burst"			"Weapon_Nuker.SingleCrit"
-				"sound_special1"		"Weapon_Nuker.Explosion"
+				"sound_single_shot"		"Weapon_Nukesalot.Single"
+				"sound_burst"			"Weapon_Nukesalot.SingleCrit"
+				"sound_special1"		"Weapon_Nukesalot.Explosion"
 				
 			}
 		}
@@ -2198,6 +2436,8 @@ Cloak drain rate based on movement speed."
             }
 		}
 
+//		Credits to Haau
+
 //      Soldier - Secondary
 //		Compatriot Eagle
 //      ____________________________________________
@@ -2248,7 +2488,7 @@ Cloak drain rate based on movement speed."
 				"longer damage falloff distance"
 				{
 					"attribute_class"	"mult_falloff_distance"
-					"value"	"1.5"
+					"value"	"1.25"
 				}
 			
 				"fire rate penalty"
@@ -2803,6 +3043,8 @@ Cloak drain rate based on movement speed."
             }
 		}
 		
+//		Credits to Haau
+		
 //      Pyro - Primary
 //		Lamplighter
 //      ____________________________________________
@@ -2949,6 +3191,8 @@ Cloak drain rate based on movement speed."
                 }
 			}
 		}
+		
+//		Credits to dopadream, TheEndlessBitch, Createvi, and Ivon
 
 //	Pyro - Secondary
 //		Wrist Twister
@@ -3322,6 +3566,8 @@ Cloak drain rate based on movement speed."
 			}
 		}
 
+//		Credits to Afro-Naut for the model (Horizontal Loch-n-Load)
+
 //      Demoman - Primary
 //		Double Vision
 //      ____________________________________________
@@ -3433,6 +3679,191 @@ Cloak drain rate based on movement speed."
 				}
 			}
 		}
+		
+//      Demoman - Primary
+//		Lunatic Grenadier
+//      ____________________________________________
+
+		"10021"
+		{
+			"name"	"Lunatic Grenadier"
+			"particle_suffix"	"iron_bomber"
+			"enabled"	"1"
+			"item_class"		"tf_weapon_grenadelauncher"
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_logname"	"lunatic_grenadier"
+			"item_iconname"	"iron_bomber"
+			"item_type_name"	"Bigrock-Grade Grenade Launcher"
+			"item_description"	"They're goin' ta have to glue this place back together...
+IN HELL!"
+			"item_name"		"Lunatic Grenadier"
+			"item_slot"		"primary"
+			"anim_slot"		"secondary"
+			"item_quality"		"rarity4"
+			"min_ilevel"		"1"
+			"max_ilevel"		"99"
+			"propername"		"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "55"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_quadball/c_quadball"
+			"model_player"	"models/workshop/weapons/c_models/c_quadball/c_quadball.mdl"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+				"full moon restricted display"	"1"
+				"grenadier explain"				"1"
+			}
+			"attributes"
+			{
+				"weapon exclusive to holiday"
+				{
+					"attribute_class"	"weapon_exclusive_to_holiday"
+					"value"	"8"
+				}
+				
+				"Projectile speed decreased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"0.75"
+				}
+				
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"				"0.80"
+				}
+				
+				"nukesalot self die"						"1"
+				
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/projectiles/nuke_bomb/cart_bomb_micronuke.mdl"
+				}
+				
+				"hidden separator"			"1"
+				
+				"charge time increased"
+				{
+					"attribute_class"	"mod_charge_time"
+					"value" "-2"
+				}
+				
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.85"
+				}
+				"Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"				"1.5"
+				}
+				
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.3"
+				}
+				
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"0.6"
+				}
+				
+				"projectile spread angle penalty"
+				{
+					"attribute_class"	"projectile_spread_angle"
+					"value"				"7"
+				}
+				
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"	"100000"
+				}
+				
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"1.25"
+				}
+				
+				"auto fires full clip"
+				{
+					"attribute_class"	"auto_fires_full_clip"
+					"value"	"1"
+				}
+				
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"10"
+				}
+				
+				"grenade no spin"
+				{
+					"attribute_class"	"grenade_no_spin"
+					"value"	"1"
+				}
+				
+				"sticky air burst mode"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"	"3"
+				}
+				
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Grenadier.Single"
+				"sound_burst"			"Weapon_Grenadier.Single"
+				"sound_special1"		"Weapon_Grenadier.Explosion"
+				"explosion_effect"        "SYS_explosion_175"
+				"animation_replacement"
+				{
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+			"visuals_red"
+            {
+                "use_visualsblock_as_base"    "visuals"
+                "explosion_effect_crit"    "SYS_explosion_175_crit_red"
+            }
+            "visuals_blu"
+            {
+                "use_visualsblock_as_base"    "visuals"
+                "explosion_effect_crit"    "SYS_explosion_175_crit_blue"
+            }
+            "visuals_grn"
+            {
+                "use_visualsblock_as_base"    "visuals"
+                "explosion_effect_crit"    "SYS_explosion_175_crit_green"
+            }
+            "visuals_ylw"
+            {
+                "use_visualsblock_as_base"    "visuals"
+                "explosion_effect_crit"    "SYS_explosion_175_crit_yellow"
+            }
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
 
 
 //      Demoman - Primary
@@ -3485,11 +3916,7 @@ Cloak drain rate based on movement speed."
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"17"
-				}
+		
 				"grenade launcher mortar mode"
 				{
 					"attribute_class"	"grenade_launcher_mortar_mode"
@@ -5246,12 +5673,11 @@ Cloak drain rate based on movement speed."
 		}
 		
 
+//		Credits to Dement for The Deputy model
+//		Credits to SilentFox3 for porting it (NOWP)
+
 //      Engineer - Secondary
 //		Sharpshooter
-
-//	Credits to Dement for The Deputy model
-//	Credits to SilentFox3 for porting it (NOWP)
-//	
 //      ____________________________________________
 		"10000"
 		{
@@ -5664,6 +6090,8 @@ Cloak drain rate based on movement speed."
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 
+//		Credits to Gangstahwezel, CoBalt, and not taken username
+
 //      Medic - Medigun
 //		Invigorator
 //      ____________________________________________
@@ -5855,6 +6283,8 @@ Cloak drain rate based on movement speed."
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 
+//		Credits to Haau
+
 //      Sniper - Primary
 //		Aussie Shooter
 //      ____________________________________________
@@ -5995,6 +6425,9 @@ Cloak drain rate based on movement speed."
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
+
+
+//		Credits to Colteh, SedimentarySocks, Black Mesa, and Ivon
 
 //      Sniper - Primary
 //		Crossbow
@@ -6312,7 +6745,9 @@ Cloak drain rate based on movement speed."
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		
+
+//		Credits to DeRosaj and Ivon
+
 //      Spy - Secondary
 //		Frenchlock
 //      ____________________________________________
@@ -6765,7 +7200,9 @@ Cloak drain rate based on movement speed."
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		
+
+//		Credits to wowza and Felixgato8
+
 //      Spy - Building
 //		Live Transmission
 //      ____________________________________________
@@ -6846,6 +7283,8 @@ Cloak drain rate based on movement speed."
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+
+// 		Credits to Open Fortress, TheNameNoOneKnew, and The Grouse.
 
 //      Civilian - Gun
 //		Unescorted
@@ -6942,12 +7381,14 @@ Cloak drain rate based on movement speed."
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		
+
+// 		Credits to Kiri for providing the v_model/w_model
+
 //      Civilian - Melee
 //		Health Insurance
 //      ____________________________________________
 		
-		"10020"
+		"10019"
 		{
 			"name"				"Health Insurance"
 			"item_name"			"Health Insurance"

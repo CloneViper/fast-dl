@@ -63,7 +63,7 @@
 	"wave"		")weapons/sniper_crossbow_shoot_crit.wav"
 }
 
-"Weapon_Nuker.Single"
+"Weapon_Nukesalot.Single"
 {
 	"channel"		"CHAN_WEAPON"
 	"volume"		"0.65, 0.75"
@@ -72,7 +72,7 @@
 	"wave"			")mvm/giant_soldier/giant_soldier_rocket_shoot.wav"
 }
 
-"Weapon_Nuker.SingleCrit"
+"Weapon_Nukesalot.SingleCrit"
 {
 	"channel"		"CHAN_WEAPON"
 	"volume"		"0.75"
@@ -81,7 +81,24 @@
 	"wave"			")mvm/giant_soldier/giant_soldier_rocket_shoot_crit.wav"
 }
 
-"Weapon_Nuker.Explosion"
+"Weapon_Nukesalot.Explosion"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1"
+	"pitch"			"100"
+	"soundlevel"  	"SNDLVL_90dB"
+	"wave"			")mvm/sentrybuster/mvm_sentrybuster_explode.wav"
+}
+
+"Weapon_Grenadier.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_100dB"
+	"volume"	"1.0"
+	"wave"		")mvm/giant_demoman/giant_demoman_grenade_shoot.wav"
+}
+
+"Weapon_Grenadier.Explosion"
 {
 	"channel"		"CHAN_WEAPON"
 	"volume"		"1"
