@@ -544,7 +544,7 @@
         {
             "name"					"auto fires full clip scattergun"
 			"attribute_class"		"auto_fires_full_clip"
-            "description_string"    "Hold Fire to load up to 4 shells
+            "description_string"    "Hold Fire to load up to four shells
 Release Fire to unleash the barrage"
             "description_format"    "value_is_additive"
             "effect_type"			"positive"
@@ -963,6 +963,68 @@ Release Fire to unleash the barrage"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
         }
+		
+		"15240"
+		{
+			"name"					"mod projectile heat seek power"
+			"attribute_class"		"mod_projectile_heat_seek_power"
+			"description_string"	"Flares are imbued with a strange power"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+        }
+		
+		"15241"
+		{
+			"name"					"dmg taken decreased"
+			"attribute_class"		"mult_dmgtaken"
+			"description_string"	"%s1% damage resistance on wearer"
+			"description_format"	"value_is_inverted_percentage"
+			"effect_type"			"positive"
+        }
+		
+		"15242"
+		{
+			"name"					"cloak bug explain"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"On Active: Cannot manually uncloak"
+			"description_format"	"value_is_additive"
+			"effect_type"			"negative"
+        }
+
+		"15243"
+		{
+			"name"					"damage additive"
+			"attribute_class"		"mult_dmg"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+        }
+		
+		"15244"
+		{
+			"name"					"damage vs players additive"
+			"attribute_class"		"mult_dmg_vs_players"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+        }
+		
+		"15245"
+		{
+			"name"					"damage vs buildings additive"
+			"attribute_class"		"mult_dmg_vs_buildings"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+        }
+		
+		"15246"
+		{
+			"name"					"extra damage on hit"
+			"attribute_class"		"extra_damage_on_hit"
+			"description_string"	"Deals more damage on successful hits"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+        }
+		
+		
 		
 	}
 
@@ -2773,7 +2835,99 @@ Release Fire to unleash the barrage"
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+		
+		
+//      Soldier/Demoman - Melee
+//		Half-Zatoichi
+//      ____________________________________________
 
+		"357"
+		{
+			"name"	"The Half-Zatoichi"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_katana"
+			"show_in_armory"	"1"
+			"item_slot"		"melee"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"item_logname"	"demokatana"
+			"item_iconname"	"demokatana"
+			"item_type_name"	"#TF_Weapon_SoldierKatana"
+			"item_name"	"#TF_SoldierKatana"
+			"item_description"	"#TF_SoldierKatana_Desc"
+			"anim_slot"	""
+			"propername"	"1"
+			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana"
+			"item_quality"	"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_SPECIAL_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_SPECIAL_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_SPECIAL_VM_INSPECT_END"
+				}
+			}
+			"used_by_classes"
+			{
+				"soldier"	"1"
+				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 -5 -10"
+			}
+			"model_player_per_class"
+			{
+				"soldier"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana_soldier.mdl"
+				"demoman"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana.mdl"
+			}
+			"attributes"
+			{
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+				"restore health on kill"
+				{
+					"attribute_class"	"restore_health_on_kill"
+					"value"	"50"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"honorbound"
+				{
+					"attribute_class"	"honorbound"
+					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
 
 //      Pyro - Primary
 //		Backburner
@@ -3194,7 +3348,7 @@ Release Fire to unleash the barrage"
 		
 //		Credits to dopadream, TheEndlessBitch, Createvi, and Ivon
 
-//	Pyro - Secondary
+//		Pyro - Secondary
 //		Wrist Twister
 //	____________________________________________
 
@@ -3317,6 +3471,131 @@ Release Fire to unleash the barrage"
 				}
 			}
 			"image_inventory"		"backpack/weapons/w_models/w_ignition"
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+
+//      Pyro - Secondary
+//		Lunatic Firefly
+//      ____________________________________________
+
+		"10022"
+		{
+			"name"	"The Lunatic Firefly"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_flaregun"
+			"tags"
+			{
+				"can_deal_damage"				"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"		"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"item_logname"	"lunatic_firefly"
+			"item_iconname"	"scorch_shot"
+			"show_in_armory"	"1"
+			"item_type_name"	"Mannhattan-Grade Flare Gun"
+			"item_name"	"Lunatic Firefly"
+			"item_description"	"Aim? It got no sights."
+			"item_slot"	"secondary"
+			"anim_slot"	"ITEM1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_scorch_shot/c_scorch_shot"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_scorch_shot/c_scorch_shot.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "30"
+			"item_quality"	"rarity4"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"				"10 0 -10"
+				"full moon restricted display"		"1"
+			}
+			"attributes"
+			{
+				"weapon exclusive to holiday"
+				{
+					"attribute_class"	"weapon_exclusive_to_holiday"
+					"value"	"8"
+				}
+				
+				"mod projectile heat seek power"
+				{
+					"attribute_class"	"mod_projectile_heat_seek_power"
+					"value"	"7"
+				}
+				
+				"minicrit vs burning player"
+				{
+					"attribute_class"	"or_minicrit_vs_playercond_burning"
+					"value"	"1"
+				}
+				
+				"faster reload rate"
+				{
+					"attribute_class"	"fast_reload"
+					"value"	"0.2"
+				}
+				
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.65"
+				}
+				
+				"Projectile speed decreased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"0.4"
+				}
+				
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+				
+				"reload while not active explain"
+				{
+					"attribute_class"	"reload_while_not_active_explain"
+					"value"	"1"
+				}
+				
+				"hidden separator"		"1"
+				
+				"projectile spread angle penalty"
+				{
+					"attribute_class"	"projectile_spread_angle"
+					"value" "2"
+				}
+				
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value" "1"
+				}
+				
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_ScorchShot.Single"
+				"sound_burst"		"Weapon_ScorchShot.SingleCrit"
+
+				"animation_replacement"
+				{
+					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
@@ -3651,6 +3930,12 @@ Release Fire to unleash the barrage"
 
 				"hidden separator"	"1"
 
+				"Reload time refill"
+				{
+					"attribute_class"	"mult_reload_time_refill"
+					"value" "4"
+				}
+				
 				"auto fires full clip all at once"
 				{
 					"attribute_class"	"auto_fires_full_clip_all_at_once"
@@ -3725,6 +4010,7 @@ IN HELL!"
 				"min_viewmodel_offset"		"10 0 -10"
 				"full moon restricted display"	"1"
 				"grenadier explain"				"1"
+				"class select override vcd"	"class_select_cyclops"
 			}
 			"attributes"
 			{
@@ -3738,6 +4024,12 @@ IN HELL!"
 				{
 					"attribute_class"	"mult_projectile_speed"
 					"value"				"0.75"
+				}
+				
+				"can overload"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"				"1"
 				}
 				
 				"move speed penalty"
@@ -6286,12 +6578,12 @@ IN HELL!"
 //		Credits to Haau
 
 //      Sniper - Primary
-//		Aussie Shooter
+//		Buckaroo Shot
 //      ____________________________________________
 
 		"10008"
 		{
-			"name"	"The Aussie Shooter"
+			"name"	"The Buckaroo Shot"
 			"particle_suffix"	"panic_attack"
 			"enabled"	"1"
 			"item_class"	"tf_weapon_shotgun"
@@ -6306,8 +6598,8 @@ IN HELL!"
 			"show_in_armory"	"1"
 			"item_type_name"	"Automatic Shotgun"
 			"item_description"	"This beauty is no rifle, lad."
-			"item_name"	"Aussie Shooter"
-			"item_logname"	"aussie_shooter"
+			"item_name"	"Buckaroo Shot"
+			"item_logname"	"buckaroo_shot"
 			"item_iconname"	"autoshot"
 			"item_slot"	"primary"
 			"anim_slot"	"secondary"
@@ -6400,10 +6692,6 @@ IN HELL!"
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
 				}
-
-
-				
-
 			}
 			"visuals"
 			{
@@ -6935,11 +7223,6 @@ IN HELL!"
 				"damage penalty"			"0.05"
 				"maxammo secondary reduced"	"0.33"
 				"Reload time increased"		"2"
-				
-				
-				
-				
-				
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -7025,7 +7308,129 @@ IN HELL!"
 					"value" "-25"
 				}
 			}
-		}	
+		}
+
+
+//      Spy - Melee
+//		The Escrimeur
+//      ____________________________________________
+
+		"10023"
+		{
+			"name"	"The Escrimeur"
+			"prefab"	"weapon_spy_knife_item2"
+			//"item_class"	"tf_weapon_sword"
+			"item_type_name"	"#TF_Weapon_Sword"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"		"1"
+				"can_deal_taunt_damage"			"1"
+			}
+			"item_name"	"Escrimeur"
+			"item_description"	"Gentlemen don't hide."
+			"propername"	"1"
+			"item_logname"	"escrimeur"
+			"item_iconname"	"rapier"
+			"inspect_panel_dist" 			"80"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"image_inventory"		"backpack/weapons/w_models/w_rapier"
+			"model_player"	"models/weapons/custom_models/c_rapier/c_switchblade.mdl"
+			"extra_wearable"	"models/player/items/spy/noblehair.mdl"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+				"taunt attack name"			"TAUNTATK_SPY_FENCING_SLASH_B"
+				"taunt attack time"			"2.2"
+			}
+			"attributes"
+			{
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				
+				"melee attack rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.6"
+				}
+				
+				"dmg taken decreased"
+				{
+					"attribute_class"	"mult_dmgtaken"
+					"value"				"0.8"
+				}
+				
+				"less crit damage display"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"80"
+				}
+				
+				"cannot disguise"
+				{
+					"attribute_class"	"mult_dmgtaken"
+					"value"				"1"
+				}
+				
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+				
+				"hidden separator"			"1"
+				
+				"damage vs players additive"
+				{
+					"attribute_class"	"mult_dmg_vs_players"
+					"value"				"60"
+				}
+				
+				"damage penalty on bodyshot"
+				{
+					"attribute_class"	"bodyshot_damage_modify"
+					"value"				"0.000001"
+				}
+				
+				"mult dmg crit multiplier"
+				{
+					"attribute_class"	"mult_dmg_crit_multiplier"
+					"value"				"0.444"
+				}
+				
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				
+			}
+			"visuals"
+			{
+				"sound_melee_miss"	"Weapon_Knife.Miss"
+				"sound_melee_hit"	"Weapon_Knife.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Knife.HitWorld"
+				"sound_burst"		"Weapon_Knife.SwingCrit"
+				"sound_special1"	"Sword.Hit"
+				"sound_special2"	"Sword.Idle"
+			}
+			"taunt"
+            {
+				"custom_taunt_scene_per_class"
+				{
+                    "spy"
+                    {
+                        "1"                "scenes/player/spy/low/taunt03_v1.vcd"
+						"2"                "scenes/player/spy/low/taunt03_v2.vcd"
+                    }
+                }
+            }
+		}
+
 		
 //      Spy - Melee
 //		Kunai
@@ -7223,7 +7628,8 @@ IN HELL!"
 			"show_in_armory"	"1"
 			"item_type_name"	"Portable Television"
 			"item_name"	"Live Transmission"
-			"item_description"	"Coming straight from your house."
+			"item_description"	"Coming straight from your house.
+Press '2' twice to select the item (sorry for the ghost sapper)"
 			"item_slot"	"building"
 			"item_quality"	"unique"
 			"item_logname"	"recorder"
@@ -7250,6 +7656,7 @@ IN HELL!"
 				
 				"sapper disabled"			"1"
 				"sapper cant sap"			"1"
+				"cloak bug explain"			"1"
 				
 				"hidden separator"			"1"
 				"fire rate penalty"				"1.6"
