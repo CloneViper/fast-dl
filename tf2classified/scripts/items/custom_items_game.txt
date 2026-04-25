@@ -5700,7 +5700,8 @@ IN HELL!"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 				"53"					
-			"model_player"	"models/workshop/weapons/c_models/c_fists_of_steel/c_fists_of_steel.mdl"
+			//"model_player"	"models/workshop/weapons/c_models/c_fists_of_steel/c_fists_of_steel.mdl"
+			"model_player"	"models/weapons/custom_models/c_fos/c_fists_of_steel.mdl"
 			"attach_to_hands"	"1"
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
@@ -5769,86 +5770,6 @@ IN HELL!"
 				}
 
 				
-			}
-
-			"visuals_red"
-			{
-				"skin"	"0"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-				"sound_melee_miss"	"Weapon_MetalGloves.Miss"
-				"sound_melee_hit"	"Weapon_MetalGloves.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_MetalGloves.HitWorld"
-				"sound_burst"		"Weapon_MetalGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_VM_DRAW"	"ACT_MELEE_VM_ITEM1_DRAW"
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
-			}
-
-			"visuals_blu"
-			{
-				"skin"	"1"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-				"sound_melee_miss"	"Weapon_MetalGloves.Miss"
-				"sound_melee_hit"	"Weapon_MetalGloves.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_MetalGloves.HitWorld"
-				"sound_burst"		"Weapon_MetalGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_VM_DRAW"	"ACT_MELEE_VM_ITEM1_DRAW"
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
-			}
-
-			"visuals_grn"
-			{
-				"skin"	"1"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-				"sound_melee_miss"	"Weapon_MetalGloves.Miss"
-				"sound_melee_hit"	"Weapon_MetalGloves.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_MetalGloves.HitWorld"
-				"sound_burst"		"Weapon_MetalGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_VM_DRAW"	"ACT_MELEE_VM_ITEM1_DRAW"
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
-			}
-
-			"visuals_ylw"
-			{
-				"skin"	"0"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-				"sound_melee_miss"	"Weapon_MetalGloves.Miss"
-				"sound_melee_hit"	"Weapon_MetalGloves.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_MetalGloves.HitWorld"
-				"sound_burst"		"Weapon_MetalGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_VM_DRAW"	"ACT_MELEE_VM_ITEM1_DRAW"
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
 			}
 
 			"taunt"

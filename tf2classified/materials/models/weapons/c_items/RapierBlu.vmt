@@ -23,6 +23,7 @@
 
 	// Cloaking
 	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
 	"Proxies"
 	{
 		"weapon_invis"
