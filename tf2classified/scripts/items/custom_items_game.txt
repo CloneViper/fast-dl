@@ -2,6 +2,7 @@
 
 // Based on Jareb's Live Item Schema.
 // Thanks to Kiri for practically teaching me how to mess with item schema, and helping me with certain assets.
+// Credits to Maximsaga (Mannly Munitions' creator) for providing the assets for YLW/GRN support
 
 "items_game"
 {	
@@ -1017,14 +1018,12 @@ Release Fire to unleash the barrage"
 		
 		"15246"
 		{
-			"name"					"extra damage on hit"
-			"attribute_class"		"extra_damage_on_hit"
-			"description_string"	"Deals more damage on successful hits"
+			"name"					"is sword display"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"#Attrib_IsASword"
 			"description_format"	"value_is_additive"
-			"effect_type"			"positive"
+			"effect_type"			"neutral"
         }
-		
-		
 		
 	}
 
@@ -2017,7 +2016,7 @@ Release Fire to unleash the barrage"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_blackbox/c_blackbox"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_blackbox/c_blackbox.mdl"
+			"model_player"	"models/weapons/c_models/c_blackbox/c_blackbox.mdl"
 			"attach_to_hands" "1"
 			"inspect_panel_dist" "55"
 			"used_by_classes"
@@ -2869,6 +2868,7 @@ Release Fire to unleash the barrage"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attach_to_hands"	"1"
+			"extra_wearable"	"models/player/items/demo/demo_sheath.mdl"
 			"visuals"
 			{
 				"animation_replacement"
@@ -2889,8 +2889,8 @@ Release Fire to unleash the barrage"
 			}
 			"model_player_per_class"
 			{
-				"soldier"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana_soldier.mdl"
-				"demoman"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana.mdl"
+				"soldier"	"models/weapons/c_models/c_shogun_katana/c_shogun_katana_soldier.mdl"
+				"demoman"	"models/weapons/c_models/c_shogun_katana/c_shogun_katana.mdl"
 			}
 			"attributes"
 			{
@@ -3013,7 +3013,7 @@ Release Fire to unleash the barrage"
 			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower.mdl"
+			"model_player"	"models/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower.mdl"
 			"attach_to_hands"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -3503,7 +3503,7 @@ Release Fire to unleash the barrage"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_scorch_shot/c_scorch_shot"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_scorch_shot/c_scorch_shot.mdl"
+			"model_player"	"models/weapons/c_models/c_scorch_shot/c_scorch_shot.mdl"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "30"
 			"item_quality"	"rarity4"
@@ -3530,7 +3530,7 @@ Release Fire to unleash the barrage"
 				"mod projectile heat seek power"
 				{
 					"attribute_class"	"mod_projectile_heat_seek_power"
-					"value"	"7"
+					"value"	"10"
 				}
 				
 				"minicrit vs burning player"
@@ -3626,7 +3626,7 @@ Release Fire to unleash the barrage"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_powerjack/c_powerjack"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_powerjack/c_powerjack.mdl"
+			"model_player"	"models/weapons/c_models/c_powerjack/c_powerjack.mdl"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "65"
 			"item_quality"	"unique"
@@ -4000,7 +4000,7 @@ IN HELL!"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "55"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_quadball/c_quadball"
-			"model_player"	"models/workshop/weapons/c_models/c_quadball/c_quadball.mdl"
+			"model_player"	"models/weapons/c_models/c_quadball/c_quadball.mdl"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -4194,7 +4194,7 @@ IN HELL!"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_demo_cannon/c_demo_cannon"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_demo_cannon/c_demo_cannon.mdl"
+			"model_player"	"models/weapons/c_models/c_demo_cannon/c_demo_cannon.mdl"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -4460,6 +4460,7 @@ IN HELL!"
 			"item_iconname"	"headtaker"
 			"image_inventory"	"backpack/weapons/c_models/c_headtaker/c_headtaker"
 			"model_player"	"models/weapons/c_models/c_headtaker/c_headtaker.mdl"
+			"extra_wearable"	"models/player/items/demo/demo_sheath.mdl"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -4615,6 +4616,7 @@ IN HELL!"
 			"propername"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
 			"model_player"	"models/weapons/c_models/c_claymore/c_claymore.mdl"
+			"extra_wearable"	"models/player/items/demo/demo_sheath.mdl"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -4975,7 +4977,7 @@ IN HELL!"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_tomislav/c_tomislav"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_tomislav/c_tomislav.mdl"
+			"model_player"	"models/weapons/c_models/c_tomislav/c_tomislav.mdl"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "88"
 			"item_quality"	"unique"
@@ -5168,10 +5170,7 @@ IN HELL!"
 			
 			}
 			"visuals"
-			{
-			
-				"tracer_effect"	"bullet_tracer02"
-				
+			{	
 				"sound_reload"	"Weapon_Gatling.Reload"
 				"sound_empty"	"Weapon_Gatling.ClipEmpty"
 				"sound_double_shot"	"MVM.GiantHeavyGunFire"
@@ -5278,7 +5277,7 @@ IN HELL!"
 			"item_name"	"#TF_Unique_Lunchbox_Chocolate"
 			"item_description" "High on sugar and fat."
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_chocolate/c_chocolate"
-			"model_player"	"models/workshop/weapons/c_models/c_chocolate/c_chocolate.mdl"
+			"model_player"	"models/weapons/c_models/c_chocolate/c_chocolate.mdl"
 			"extra_wearable"		"models/player/items/sandvich_lunchbox.mdl"
 			"propername"	"1"
 			"inspect_panel_dist" "31"
@@ -5434,6 +5433,7 @@ IN HELL!"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 				"53"					
 			"model_player"	"models/weapons/c_models/c_boxing_gloves/c_boxing_gloves.mdl"
+			//"model_player"		"models/weapons/custom_models/c_gru/c_boxing_gloves.mdl"
 			"attach_to_hands"	"1"
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
@@ -5450,7 +5450,7 @@ IN HELL!"
 			}
 			"attributes"
 			{
-
+			
 				"lunchbox adds minicrits"
 				{
 					"attribute_class"	"set_weapon_mode"
@@ -5468,8 +5468,6 @@ IN HELL!"
 					"attribute_class"	"mod_maxhealth_drain_rate"
 					"value"				"10.0"
 				}
-				
-				
 			}
 			"hide_bodygroups_deployed_only"	"1"
 			"visuals"
@@ -5490,90 +5488,48 @@ IN HELL!"
 					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
 				}
 			}
-
+			
 			"visuals_red"
 			{
-				"skin"	"2"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"4"
 				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
 				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
 				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
 			}
-
+			
 			"visuals_blu"
 			{
-				"skin"	"3"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"5"
 				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
 				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
 				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
 			}
-
+			
 			"visuals_grn"
 			{
-				"skin"	"3"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"6"
 				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
 				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
 				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
 			}
-
+			
 			"visuals_ylw"
 			{
-				"skin"	"2"
-				"player_bodygroups"
-				{
-					"hands"			"1"
-				}
-
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"7"
 				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
 				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
 				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
-					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALT1_VM_INSPECT_IDLE"
-					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALT1_VM_INSPECT_END"
-				}
 			}
-			"mouse_pressed_sound" "ui/item_boxing_gloves_pickup.wav"
-			"drop_sound" "ui/item_boxing_gloves_drop.wav"
+			
 			"xifier_class_remap"	"gru"
-
 			"taunt"
             {
 				"custom_taunt_scene_per_class"
@@ -5700,8 +5656,8 @@ IN HELL!"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 				"53"					
-			//"model_player"	"models/workshop/weapons/c_models/c_fists_of_steel/c_fists_of_steel.mdl"
-			"model_player"	"models/weapons/custom_models/c_fos/c_fists_of_steel.mdl"
+			"model_player"	"models/weapons/c_models/c_fists_of_steel/c_fists_of_steel.mdl"
+			//"model_player"	"models/weapons/custom_models/c_fos/c_fists_of_steel.mdl"
 			"attach_to_hands"	"1"
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
@@ -6438,7 +6394,7 @@ IN HELL!"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_amputator/c_amputator"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"		"models/workshop/weapons/c_models/c_amputator/c_amputator.mdl"
+			"model_player"		"models/weapons/c_models/c_amputator/c_amputator.mdl"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "42"
 			"item_quality"		"unique"
@@ -6903,7 +6859,7 @@ IN HELL!"
 			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_ambassador/c_ambassador.mdl"
+			"model_player"	"models/weapons/c_models/c_ambassador/c_ambassador_opt.mdl"
 			"attach_to_hands" "1"
 			"inspect_panel_dist" "32"
 			"used_by_classes"
@@ -7231,6 +7187,7 @@ IN HELL!"
 			}
 		}
 
+//		Credits to Yume and Not Taken Username
 
 //      Spy - Melee
 //		The Escrimeur
@@ -7249,7 +7206,7 @@ IN HELL!"
 				"can_deal_taunt_damage"			"1"
 			}
 			"item_name"	"Escrimeur"
-			"item_description"	"Gentlemen don't hide."
+			"item_description"	"Gentlemen don't hide, they disappear."
 			"propername"	"1"
 			"item_logname"	"escrimeur"
 			"item_iconname"	"rapier"
@@ -7264,14 +7221,15 @@ IN HELL!"
 				"min_viewmodel_offset"		"10 0 -6"
 				"taunt attack name"			"TAUNTATK_SPY_FENCING_SLASH_B"
 				"taunt attack time"			"2.2"
+				"is sword display"			"1"
 			}
 			"attributes"
 			{
-				"is_a_sword"
-				{
-					"attribute_class"	"is_a_sword"
-					"value"				"72"
-				}
+				//"is_a_sword"
+				//{
+				//	"attribute_class"	"is_a_sword"
+				//	"value"				"72"
+				//}
 				
 				"melee attack rate bonus"
 				{
@@ -7304,6 +7262,23 @@ IN HELL!"
 				}
 				
 				"hidden separator"			"1"
+				
+				"single wep holster time increased"
+				{
+					"attribute_class"	"mult_switch_from_wep_deploy_time"
+					"value"				"1.75"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"				"1.75"
+				}
+				
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.5"
+				}
 				
 				"damage vs players additive"
 				{
@@ -7591,7 +7566,11 @@ Press '2' twice to select the item (sorry for the ghost sapper)"
 			}
 			"attributes"
 			{
-				
+				"mult melee smack delay"
+				{
+					"attribute_class"		"mult_melee_smack_delay"
+					"value"		"0"
+				}
 			}
 			"visuals"
 			{
